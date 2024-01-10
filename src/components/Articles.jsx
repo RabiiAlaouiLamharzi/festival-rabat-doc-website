@@ -5,8 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
 import ArticleDetail from "../pages/ArticleDetail";
 import { ARTICLES_TEXT } from "../constants/index.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import image from "../assets/articles_image.png";
 
 const Articles = () => {
@@ -17,7 +15,7 @@ const Articles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch("http://18.206.176.229:81/api/article/shared-article");
+        const response = await fetch("http://54.83.112.170:81/api/article/shared-article");
         if (response.status === 200) {
           const data = await response.json();
           setFetchedArticles(data);
@@ -43,7 +41,7 @@ const Articles = () => {
     setModalIsOpen(false);
 
     try {
-      const response = await fetch("http://18.206.176.229:81/api/article/shared-article");
+      const response = await fetch("http://54.83.112.170:81/api/article/shared-article");
       if (response.status === 200) {
         const data = await response.json();
         setFetchedArticles(data);
@@ -100,7 +98,7 @@ const Articles = () => {
               />
             </a>
             <div className="content">
-              <span className="date">{article.updated_at}</span>
+              <span className="date">{article.updated_at.slice(0, 10)}</span>
               <h3 className="title">
                 <a href="#" onClick={() => openArticleModal(article)}>
                   {article.title}
