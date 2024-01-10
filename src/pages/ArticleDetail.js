@@ -24,7 +24,7 @@ const ArticleContent = ({ article }) => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`http://18.206.176.229:81/api/comment/list-open-comments-by-article/${article.id}`);
+      const response = await fetch(`http://54.83.112.170:81/api/comment/list-open-comments-by-article/${article.id}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data);
@@ -40,7 +40,7 @@ const ArticleContent = ({ article }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://18.206.176.229:81/api/comment/post-comment", {
+      const response = await fetch("http://54.83.112.170:81/api/comment/post-comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -287,7 +287,7 @@ const ArticleContent = ({ article }) => {
           }
   
           .close {
-            color: #000;
+            background-color: white;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -296,7 +296,7 @@ const ArticleContent = ({ article }) => {
         `}
       </style>
       <section className="article" style={{ paddingTop: 40 }}>
-        <p>{article.updated_at}</p>
+      <p>{article.updated_at.slice(0, 10)}</p>
         <h1 style={{ marginBottom: 20 }}>{article.title}</h1>
         <p>{article.body}</p>
 
@@ -387,7 +387,7 @@ const ArticleContent = ({ article }) => {
       {showModal && (
           <div className="modal">
             <div className="modal-content">
-              <span className="close" onClick={closeModal}>&times;</span>
+              <span className="close" onClick={closeModal}>close</span>
               <p>{modalMessage}</p>
             </div>
           </div>
