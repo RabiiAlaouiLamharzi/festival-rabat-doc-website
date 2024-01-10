@@ -1,0 +1,68 @@
+{
+  "name": "festival-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.0.0-14",
+    "@fortawesome/free-solid-svg-icons": "^1.0.0-14",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@testing-library/jest-dom": "^5.18.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.3.2",
+    "cors": "^2.8.5",
+    "css-loader": "^6.8.1",
+    "express": "^4.17.1",
+    "google-translate-api-browser": "^4.2.7",
+    "i18next": "^23.8.2",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
+    "jotai": "^2.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hooks-global-state": "^2.1.0",
+    "react-i18next": "^14.0.0",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.1.1",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "splitting": "^1.0.6",
+    "style-loader": "^3.3.3",
+    "translate-google": "^1.5.0",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5",
+    "webpack-cli": "^4.9.0",
+    "@babel/plugin-proposal-private-property-in-object": "^1.0.0"
+  }
+}

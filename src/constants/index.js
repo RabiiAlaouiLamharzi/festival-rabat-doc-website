@@ -1,0 +1,116 @@
+export const NAVBAR_TEXTS = {
+  MENU_HOME: "ACCUEIL",
+  MENU_CSERA: "CSERA",
+  MENU_COMPETITION: "COMPÉTITION",
+  MENU_NEWS: "ACTUALITÉS",
+};
+
+export const ARTICLES_TEXT = {
+  RECENT_NEWS_TITLE: "Actualités Récentes",
+  NEWS_ARTICLES_TITLE: "Actualités & Articles",
+  LIKE_TEXT: "J'aime",
+};
+
+export const BAR_TEXT =
+  " Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 -";
+
+  export const buttonContent = [
+    {
+      title: "Conférences",
+      text: "Sur la base d'arguments consacrés aux thèmes liés au cinéma documentaire (écriture, réalisation, production, distribution et esthétique), une table ronde a eu lieu lors de cette première édition, animée par des professionnels du cinéma, des critiques et des universitaires.",
+    },
+    {
+      title: "Panorama",
+      text: "En plus de la compétition officielle, Rabat'Doc a présenté au grand public et aux cinéphiles une sélection de films documentaires sur le continent africain. La section Panorama a introduit le vrai cinéma à un large public dans ses dimensions esthétiques et thématiques.",
+    },
+    {
+      title: "Production Nationale",
+      text: "Rabat'Doc a tenu à honorer le cinéma marocain en organisant des projections dédiées à la production documentaire nationale. Les projections ont eu lieu en présence des réalisateurs des films.",
+    },
+    {
+      title: "Ateliers",
+      text: "Rabat'Doc a tenu à organiser des ateliers de formation dans des domaines liés au cinéma et en particulier au cinéma documentaire. Des professionnels du secteur sont venus partager leurs connaissances avec des jeunes et imaginatifs prêts à servir le vrai cinéma. Une douzaine d'ateliers ont eu lieu dans divers établissements de l'Université Mohammed V.",
+    },
+    {
+      title: "Masterclass",
+      text: "Parce que le vrai cinéma est porté par de grands réalisateurs du monde entier, Rabat'Doc a tenu à inviter le célèbre documentariste camerounais Jean-Marie Teno pour partager son expérience et son expertise avec le public et les professionnels.",
+    },
+  ];
+  
+  export const DETAILS_TEXTS = {
+    IDENTITY_TITLE: "Identité de CSERA",
+    IDENTITY_CONTENT:
+      "Le Centre Sijilmassa d'Études et de Recherche Audiovisuelles, intégré à l'Université Mohammed V de Rabat, est un centre académique ouvert aux experts, chercheurs, étudiants et professionnels passionnés par l'imagerie cinématographique. Le centre vise à développer la recherche dans le domaine cinématographique et ses dérivés, facilitant cette quête grâce à une bibliothèque spécialisée et encourageant la traduction d'œuvres cinématographiques étrangères. Il s'engage à soutenir les projets des chercheurs étudiants et à créer un espace de dialogue international entre intellectuels et chercheurs. De plus, le centre cherche à établir des collaborations scientifiques avec des institutions similaires dans le monde entier, à participer à des festivals nationaux et internationaux, et à dynamiser la scène cinématographique grâce à la création de clubs universitaires. Son objectif central reste l'organisation du 'Festival International du Film Documentaire Africain à Rabat'.",
+    VALUE_ADDED_TITLE: "Valeur Ajoutée de Rabat'Doc Africa",
+    VALUE_ADDED_CONTENT:
+      "Rabat'Doc Africa n'est pas une activité éphémère aux effets limités dans le temps et l'espace. Il aspire à se positionner comme un événement unique dans sa forme et son contenu. C'est une dynamique que CSERA imprime dans le champ culturel du pays, au cœur de sa capitale, qui, à son tour, est au cœur du continent africain.",
+  };
+  
+  export const FOOTER_TEXTS = {
+    MAKE_PASSION_1: "Nous Créons, Avec Passion et",
+    MAKE_PASSION_2: "Professionnalisme,",
+    MAKE_PASSION_3: "Toutes Sortes de Productions.",
+    EXPLORE_TITLE: "Explorer",
+    EXPLORE_LINKS: [
+      { label: "ACCUEIL", href: "#hero" },
+      { label: "CSERA", href: "#details" },
+      { label: "COMPÉTITION", href: "#winners" },
+      { label: "ACTUALITÉS", href: "#articles" },
+    ],
+    VISIT_TITLE: "Visiter",
+    VISIT_ADDRESS: ["2, Rue de Bethléem,", "Bât. 2 N° 8", "Rabat - Maroc"],
+    CONTACT_TITLE: "Contact",
+    CONTACT_EMAIL: "saissmedit@gmail.com",
+    CONTACT_PHONE: "+212 5 37 72 77 38",
+    NEW_BUSINESS_TITLE: "Nouveau Business",
+    NEW_BUSINESS_PHONE: "+212 5 37 72 77 38",
+    FOLLOW_TITLE: "Suivez-nous",
+    FOLLOW_LINKS: [
+      { label: "Instagram", href: "#" },
+      { label: "Twitter", href: "#" },
+      { label: "LinkedIn", href: "#" },
+    ],
+    LEGAL_TITLE: "Mentions Légales",
+    LEGAL_LINKS: [
+      { label: "Conditions", href: "#" },
+      { label: "Confidentialité", href: "#" },
+    ],
+    VIEW_PRESSBOOK: "Voir Pressbook",
+  };
+  
+  export const HERO_TEXTS = {
+    TITLE: "Il Est Temps de Regarder des Films",
+    PARAGRAPH:
+      "Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500. Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500.",
+    BUTTON_TEXT: "REGARDER",
+  };
+  
+  export const INTRO_TEXTS = {
+    PARAGRAPH:
+      "Le Festival International Rabat’Doc Africa, organisé par le CSERA (Centre Sijilmassa d'Études et de Recherche Audiovisuelles), met en lumière des films documentaires africains. Du 25 au 29 avril dans la vibrante ville de Rabat, au Maroc, il crée un lien entre l'histoire riche du continent et les aspirations de sa jeunesse pour un avenir meilleur. Cet événement annuel met en avant les liens culturels entre Rabat et l'Afrique, présentant la brillance cinématographique du continent et favorisant la connexion entre l'authenticité de l'Afrique et son identité en évolution.",
+  };
+  
+  export const VIDEO_PLAYER = {
+    WARNING: "Votre navigateur ne prend pas en charge la balise vidéo.",
+  };
+  
+  export const WINNERS_TEXTS = {
+    TITLE: "Compétition Officielle",
+    DESCRIPTION:
+      "Huit films documentaires récents que le jury de sélection a retenus sur des critères esthétiques et thématiques propres au vrai cinéma et axés sur l'Afrique étaient à l'ordre du jour de la compétition officielle. La cérémonie d'ouverture a présenté les huit films en lice pour les trois prix du festival : le 'Grand Prix', parrainé par 'Al-Jazeera Documentary', le 'Prix du Jury' et le 'Prix de la Créativité Universitaire'.",
+    DETAILS:
+      "Les films, représentant le Maroc, la Tunisie, le Sénégal, la Côte d'Ivoire, le Mali, le Burkina Faso et le Congo, sont 'Je Resterai Photographe' d'Ananias Léki Dago, 'Amuka' d'Antonio Spanò, 'Gardien des Mondes' de Leila Chaïbi, 'Le Dernier Refuge' d'Ousmane Samassékou, 'Traversée' de Joël Akafou, '20 Ans Plus Tard' de Moussa Touré, 'Pack Été' de Salem Ballal et 'Le Taxi, le Cinéma et Moi' de Salam Zampaligré.",
+  };
+
+  export const COMMENTS_TEXTS = {
+    TITLE: "Ajouter un Commentaire",
+    FNAME: "Prénom :",
+    LNAME: "Nom :",
+    EMAIL: "E-mail :",
+    COMMENT: "Commentaire :",
+    SUBMIT: "PUBLIER",
+    FIRST: "Soyez le premier à commenter !",
+    COMMENT1: "Commentaire",
+    COMMENT2: "Commentaires",
+    LIKES: "J'AIME",
+  };  

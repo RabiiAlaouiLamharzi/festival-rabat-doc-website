@@ -1,0 +1,112 @@
+import React from "react";
+import Logo from "../assets/logo.png";
+import { FOOTER_TEXTS } from "../constants/index.js";
+import { useTranslation } from "react-i18next";
+
+const Footer = () => {
+  const { t } = useTranslation();
+  return (
+    <footer>
+      <nav className="footer-inner">
+        <section className="footer-item">
+          <img className="footer-logo1" src={Logo} alt="Logo" />
+          <h2 className="h2class">
+            {FOOTER_TEXTS.MAKE_PASSION_1}
+            <br /> {FOOTER_TEXTS.MAKE_PASSION_2} <br />
+            <b className="color">
+              {" "}
+              {FOOTER_TEXTS.MAKE_PASSION_3} <br />{" "}
+            </b>
+          </h2>
+          <h2 className="h2class">{FOOTER_TEXTS.MAKE_WITH_PASSION}</h2>
+        </section>
+
+        <section className="footer-item">
+          <h3>{FOOTER_TEXTS.EXPLORE_TITLE}</h3>
+          <ul>
+            {FOOTER_TEXTS.EXPLORE_LINKS.map((link, index) => (
+              <li key={index}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="footer-item">
+          <h3>{FOOTER_TEXTS.VISIT_TITLE}</h3>
+          <a
+            href="https://saissmedit.ma/contact-us/?lang=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {FOOTER_TEXTS.VISIT_ADDRESS.map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
+          </a>
+
+          <h3 className="desktop">{FOOTER_TEXTS.CONTACT_TITLE}</h3>
+          <p className="desktop">
+            <a
+              href="https://saissmedit.ma/contact-us/?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {FOOTER_TEXTS.CONTACT_EMAIL}
+            </a>
+          </p>
+          <p className="desktop">
+            <a
+              href="https://saissmedit.ma/contact-us/?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {FOOTER_TEXTS.CONTACT_PHONE}
+            </a>
+          </p>
+        </section>
+
+        <section className="footer-item">
+          <h3>{FOOTER_TEXTS.NEW_BUSINESS_TITLE}</h3>
+          <p>
+            <a href="#">{FOOTER_TEXTS.NEW_BUSINESS_PHONE}</a>
+          </p>
+        </section>
+
+        <section className="footer-item">
+          <h3>{FOOTER_TEXTS.FOLLOW_TITLE}</h3>
+          <ul>
+            {FOOTER_TEXTS.FOLLOW_LINKS.map((link, index) => (
+              <li key={index}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="footer-item">
+          <h3>{FOOTER_TEXTS.LEGAL_TITLE}</h3>
+          <ul>
+            {FOOTER_TEXTS.LEGAL_LINKS.map((link, index) => (
+              <li key={index}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="footer-item">
+          <a
+            href="https://drive.google.com/drive/folders/1j9WqlZbUuIg8ZjVfJkKaz1YFozTGYhax?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-button"
+          >
+            {FOOTER_TEXTS.VIEW_PRESSBOOK}
+          </a>
+        </section>
+      </nav>
+    </footer>
+  );
+};
+
+export default Footer;

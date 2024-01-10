@@ -1,0 +1,50 @@
+[
+  {
+    "article_id": 1,
+    "first_name": "rabii",
+    "last_name": "alaoui",
+    "email": "rabii.alaoui89@gmail.com",
+    "body": "this is my comment bro",
+    "active": false
+  },
+  {
+    "article_id": 2,
+    "first_name": "aymane",
+    "last_name": "douah",
+    "email": "duah.aymane@gmail.com",
+    "body": "this is my comment",
+    "active": false
+  },
+  {
+    "article_id": 2,
+    "first_name": "hamidou",
+    "last_name": "alalou",
+    "email": "dari.alaoui89@gmail.com",
+    "body": "this is my comment to your article",
+    "active": false
+  },
+  {
+    "article_id": 2,
+    "first_name": "omar",
+    "last_name": "khaldoun",
+    "email": "omar.khaldoun@aui.ma",
+    "body": "new comment",
+    "active": false
+  },
+  {
+    "article_id": 2,
+    "first_name": "",
+    "last_name": "hicham",
+    "email": "hicham@email.com",
+    "body": "test",
+    "active": false
+  },
+  {
+    "article_id": 2,
+    "first_name": "",
+    "last_name": "maram",
+    "email": "maram@aui.ma",
+    "body": "test maram",
+    "active": false
+  }
+]
