@@ -164,7 +164,6 @@ const Articles = () => {
               color: "#fff",
             }}
           >
-            <FontAwesomeIcon icon={faTimes} />
           </button>
           {selectedArticle && <ArticleDetail article={selectedArticle} />}
         </Modal>
