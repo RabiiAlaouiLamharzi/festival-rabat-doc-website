@@ -15,7 +15,7 @@ const Articles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch("http://54.83.112.170:81/api/article/shared-article");
+        const response = await fetch("//54.83.112.170:81/api/article/shared-article");
         if (response.status === 200) {
           const data = await response.json();
           setFetchedArticles(data);
@@ -41,7 +41,7 @@ const Articles = () => {
     setModalIsOpen(false);
 
     try {
-      const response = await fetch("http://54.83.112.170:81/api/article/shared-article");
+      const response = await fetch("//54.83.112.170:81/api/article/shared-article");
       if (response.status === 200) {
         const data = await response.json();
         setFetchedArticles(data);
