@@ -24,7 +24,7 @@ const ArticleContent = ({ article }) => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`//54.83.112.170:81/api/comment/list-open-comments-by-article/${article.id}`);
+      const response = await fetch(`https://api.dash-aloui.net/api/comment/list-open-comments-by-article/${article.id}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data);
@@ -40,7 +40,7 @@ const ArticleContent = ({ article }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("//54.83.112.170:81/api/comment/post-comment", {
+      const response = await fetch("https://api.dash-aloui.net/api/comment/post-comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ const ArticleContent = ({ article }) => {
       const updatedLikes = isLiked ? likes - 1 : likes + 1;
   
       // Update likes on the server
-      const response = await fetch(`//18.206.176.229:81/api/comment/list-open-comments-by-article/${article.id}`, {
+      const response = await fetch(`https://api.dash-aloui.net/api/comment/list-open-comments-by-article/${article.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
