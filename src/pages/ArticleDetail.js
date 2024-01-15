@@ -313,6 +313,18 @@ const ArticleContent = ({ article }) => {
         <h2>{COMMENTS_TEXTS.TITLE}</h2>
         <form onSubmit={handleCommentSubmit} style={{ marginLeft: 0 }}>
           <label>
+            {COMMENTS_TEXTS.FNAME}
+            <br />
+            <input
+              type="text"
+              style={{ paddingLeft: 15}}
+              value={newComment.first_name}
+              onChange={(e) =>
+                setNewComment({ ...newComment, last_name: e.target.value })
+              }
+            />
+          </label>
+          <label>
             {COMMENTS_TEXTS.LNAME}
             <br />
             <input
