@@ -90,7 +90,7 @@ const ArticleContent = ({ article }) => {
       const updatedLikes = isLiked ? likes - 1 : likes + 1;
   
       // Update likes on the server
-      const response = await fetch(`https://api.dash-aloui.net/api/comment/list-open-comments-by-article/${article.id}`, {
+      const response = await fetch(`https://api.dash-aloui.net/api/article/like-article/${article.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
