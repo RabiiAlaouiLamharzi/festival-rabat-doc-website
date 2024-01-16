@@ -6,7 +6,7 @@ const Preloader = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setFadeOut(true);
-    }, 12000); // Set the duration of the charging bar animation (10.05s) as the timeout duration
+    }, 10000); // Set the duration of the charging bar animation (10.05s) as the timeout duration
 
     return () => clearTimeout(timeout);
   }, []);
