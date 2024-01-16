@@ -9,12 +9,12 @@ const ArticleContent = ({ article }) => {
   const [comments, setComments] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [newComment, setNewComment] = useState({
-    last_name: "", 
+    last_name: "",
     first_name: "",
     email: "",
     body: "",
   });
-  
+
   const [likes, setLikes] = useState(article.likes);
   const [isLiked, setIsLiked] = useState(false);
 
@@ -38,7 +38,7 @@ const ArticleContent = ({ article }) => {
 
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       setNewComment({ first_name: "", body: "", last_name: "", email: "" });
       // Show SweetAlert success message
@@ -65,10 +65,10 @@ const ArticleContent = ({ article }) => {
           active: false,
         }),
       });
-  
+
     } catch (error) {
       console.error("Error submitting comment:", error);
-  
+
       // Show SweetAlert error message
       Swal.fire({
         title: 'Erreur!',
@@ -78,7 +78,7 @@ const ArticleContent = ({ article }) => {
       });
     }
   };
-  
+
     // Function to close the modal
     const closeModal = () => {
       setShowModal(false);
@@ -86,12 +86,12 @@ const ArticleContent = ({ article }) => {
 
     const handleLikeClick = async () => {
       try {
-    
+
         // Update likes on the server using GET instead of PUT
         const response = await fetch(`https://api.dash-aloui.net/api/article/like-article/${article.id}`, {
           method: "GET",
         });
-    
+
         if (response.ok) {
           // Re-fetch the updated article
           const articleResponse = await fetch("https://api.dash-aloui.net/api/article/shared-article");
@@ -109,8 +109,8 @@ const ArticleContent = ({ article }) => {
       } catch (error) {
         console.error("Error updating likes:", error);
       }
-    };    
-  
+    };
+
 
   return (
     <div id="app" style={{ display: "", height: "100vh", overflowY: "auto" }}>
@@ -283,7 +283,7 @@ const ArticleContent = ({ article }) => {
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.5);
           }
-  
+
           .modal-content {
             background-color: red;
             margin: 15% auto;
@@ -291,7 +291,7 @@ const ArticleContent = ({ article }) => {
             border: 1px solid #888;
             width: 50%;
           }
-  
+
           .close {
             background-color: white;
             float: right;
@@ -386,8 +386,8 @@ const ArticleContent = ({ article }) => {
           className="comments-wrapper"
           style={{
             paddingTop: 0,
-            overflowY: "auto", 
-            maxHeight: "100px", 
+            overflowY: "auto",
+            maxHeight: "100px",
           }}
         >
           <ul>

@@ -26,7 +26,7 @@ const Articles = () => {
       } catch (error) {
         console.error("Error fetching articles:", error);
       }
-      
+
     };
 
     fetchArticles();
@@ -51,7 +51,7 @@ const Articles = () => {
       }
     } catch (error) {
       console.error("Error fetching articles:", error);
-    }    
+    }
   };
 
   const settings = {
