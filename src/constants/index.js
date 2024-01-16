@@ -79,7 +79,7 @@ export const BAR_TEXT =
   };
   
   export const HERO_TEXTS = {
-    TITLE: "Il Est Temps de Regarder des Films",
+    TITLE: "Il Est Temps de Regarder Films",
     PARAGRAPH:
       "Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500. Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500.",
     BUTTON_TEXT: "REGARDER",

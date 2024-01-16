@@ -1,6 +1,5 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Bar from "./components/Bar";
@@ -19,16 +18,24 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fakeDataFetch = () => {
-      setTimeout(() => {
+    const fetchData = async () => {
+      try {
+        // Simulating an asynchronous data fetch
+        // Replace this with your actual data fetching logic
+        await new Promise((resolve) => setTimeout(resolve, 10000));
+
+        // Once the data is loaded, update the state to stop showing the preloader
         setIsLoading(false);
-      }, 10000);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        // Handle errors if needed
+      }
     };
 
-    fakeDataFetch();
+    fetchData();
   }, []);
 
-  return isLoading ? ( 
+  return isLoading ? (
     <Preloader />
   ) : (
     <BrowserRouter>

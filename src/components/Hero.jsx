@@ -56,7 +56,7 @@ const Hero = () => {
       style={{
         position: "relative",
         overflow: "hidden",
-        height: "73.5vh", // Set height to 70% of the viewport height
+        height: "70vh", // Set height to 70% of the viewport height
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

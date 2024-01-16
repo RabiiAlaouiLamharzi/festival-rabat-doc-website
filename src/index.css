@@ -1899,3 +1899,9 @@ ion-icon {
   align-items: center;
   height: 100vh;
 }
+
+.custom-confirm-button {
+  color: black !important;
+  background-color: goldenrod !important;
+  border-radius: 0 !important;
+}

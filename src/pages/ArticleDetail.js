@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import heartEmpty from '../assets/heart_empty.png';
 import heartFull from '../assets/heart_full.png';
+import Swal from 'sweetalert2';
 import { COMMENTS_TEXTS } from "../constants/index.js";
 
 const ArticleContent = ({ article }) => {
   const [comments, setComments] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
   const [newComment, setNewComment] = useState({
-    user: "",
-    text: "",
     last_name: "", 
+    first_name: "",
     email: "",
+    body: "",
   });
   
   const [likes, setLikes] = useState(article.likes);
@@ -24,7 +24,7 @@ const ArticleContent = ({ article }) => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch(`http://18.206.176.229:81/api/comment/list-open-comments-by-article/${article.id}`);
+      const response = await fetch(`https://api.dash-aloui.net/api/comment/list-open-comments-by-article/${article.id}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data);
@@ -40,77 +40,76 @@ const ArticleContent = ({ article }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://18.206.176.229:81/api/comment/post-comment", {
+      setNewComment({ first_name: "", body: "", last_name: "", email: "" });
+      // Show SweetAlert success message
+      Swal.fire({
+        title: 'Succès!',
+        text: 'Commentaire soumis avec succès. Il sera examiné et ensuite publié.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'custom-confirm-button',
+        },
+      });
+      await fetch("https://api.dash-aloui.net/api/comment/post-comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           article_id: article.id,
-          first_name: newComment.user,
+          first_name: newComment.first_name,
           last_name: newComment.last_name,
           email: newComment.email,
-          body: newComment.text,
+          body: newComment.body,
           active: false,
-        }),
-      }
-      );
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        setComments([...comments, data.comment]);
-        setNewComment({ user: "", text: "", last_name: "", email: "" });
-        // Set the message and show the modal
-        setModalMessage("Le commentaire sera examiné et s'il est valide, il sera publié.");
-        setShowModal(true);
-  
-        // Scroll to the comments section
-        scroll.scrollTo("comments", {
-          duration: 800,
-          delay: 0,
-          smooth: "easeInOutQuart",
-        });
-      } else {
-        console.error("Failed to add comment:", data.error);
-      }
-    } catch (error) {
-      console.error("Error submitting comment:", error);
-    }
-  };  
-
-    // Function to close the modal
-    const closeModal = () => {
-      setShowModal(false);
-      setModalMessage("");
-    };
-
-  const handleLikeClick = async () => {
-    try {
-      const updatedLikes = isLiked ? likes - 1 : likes + 1;
-  
-      // Update likes on the server
-      const response = await fetch(`http://18.206.176.229:81/api/comment/list-open-comments-by-article/${article.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          likes: updatedLikes,
         }),
       });
   
-      if (response.ok) {
-        // Update local state with the new likes count
-        setLikes(updatedLikes);
-        setIsLiked(!isLiked);
-      } else {
-        console.error("Failed to update likes:", response.statusText);
-      }
     } catch (error) {
-      console.error("Error updating likes:", error);
+      console.error("Error submitting comment:", error);
+  
+      // Show SweetAlert error message
+      Swal.fire({
+        title: 'Erreur!',
+        text: 'Une erreur s\'est produite lors de la soumission du commentaire. Veuillez réessayer plus tard.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
     }
-  };  
+  };
+  
+    // Function to close the modal
+    const closeModal = () => {
+      setShowModal(false);
+    };
+
+    const handleLikeClick = async () => {
+      try {
+    
+        // Update likes on the server using GET instead of PUT
+        const response = await fetch(`https://api.dash-aloui.net/api/article/like-article/${article.id}`, {
+          method: "GET",
+        });
+    
+        if (response.ok) {
+          // Re-fetch the updated article
+          const articleResponse = await fetch("https://api.dash-aloui.net/api/article/shared-article");
+          if (articleResponse.ok) {
+            const updatedArticle = await articleResponse.json();
+            // Update local state with the new likes count
+            setLikes(updatedArticle);
+            setIsLiked(!isLiked);
+          } else {
+            console.error("Failed to re-fetch the article:", articleResponse.statusText);
+          }
+        } else {
+          console.error("Failed to update likes:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error updating likes:", error);
+      }
+    };    
   
 
   return (
@@ -119,8 +118,15 @@ const ArticleContent = ({ article }) => {
         {`
           .article {
             margin: 60px auto;
-            padding-left: 30%;
-            padding-right: 30%;
+            padding-left: 25%;
+            padding-right: 25%;
+          }
+
+          @media (max-width: 1200px) {
+            .article {
+              padding-left: 10%;
+              padding-right: 10%;
+            }
           }
 
           h1 {
@@ -287,7 +293,7 @@ const ArticleContent = ({ article }) => {
           }
   
           .close {
-            color: #000;
+            background-color: white;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -296,7 +302,7 @@ const ArticleContent = ({ article }) => {
         `}
       </style>
       <section className="article" style={{ paddingTop: 40 }}>
-        <p>{article.updated_at}</p>
+      <p>{article.updated_at.slice(0, 10)}</p>
         <h1 style={{ marginBottom: 20 }}>{article.title}</h1>
         <p>{article.body}</p>
 
@@ -306,12 +312,26 @@ const ArticleContent = ({ article }) => {
             alt={isLiked ? 'full heart' : 'empty heart'}
             style={{ width: '16px', height: '16px', marginRight: '15px', marginTop: '15px' }}
           />
-          <span style={{ color: 'white', fontSize: '20px', fontFamily: "DM Sans" }}>{isLiked ? likes + 0 : likes} {COMMENTS_TEXTS.LIKES}</span>
+          <span style={{ color: 'white', fontSize: '20px', fontFamily: "DM Sans" }}>
+            {isLiked ? article.likes + 1 : article.likes} {COMMENTS_TEXTS.LIKES}
+          </span>
         </button>
 
         {/* Comment Form */}
         <h2>{COMMENTS_TEXTS.TITLE}</h2>
         <form onSubmit={handleCommentSubmit} style={{ marginLeft: 0 }}>
+          <label>
+            {COMMENTS_TEXTS.FNAME}
+            <br />
+            <input
+              type="text"
+              style={{ paddingLeft: 15}}
+              value={newComment.first_name}
+              onChange={(e) =>
+                setNewComment({ ...newComment, first_name: e.target.value })
+              }
+            />
+          </label>
           <label>
             {COMMENTS_TEXTS.LNAME}
             <br />
@@ -341,14 +361,14 @@ const ArticleContent = ({ article }) => {
             <br />
             <textarea
             style={{ paddingLeft: 15}}
-              value={newComment.text}
+              value={newComment.body}
               onChange={(e) =>
-                setNewComment({ ...newComment, text: e.target.value })
+                setNewComment({ ...newComment, body: e.target.value })
               }
               required
             />
           </label>
-          <button type="submit">{COMMENTS_TEXTS.SUBMIT}</button>
+          <button type="submit" onclick="alert('Commentaire soumis avec succès. Il sera examiné et ensuite publié.');">{COMMENTS_TEXTS.SUBMIT}</button>
         </form>
 
         {/* Display Comments */}
@@ -385,13 +405,12 @@ const ArticleContent = ({ article }) => {
         </footer>
       {/* Modal for Comment Submission Message */}
       {showModal && (
-          <div className="modal">
-            <div className="modal-content">
-              <span className="close" onClick={closeModal}>&times;</span>
-              <p>{modalMessage}</p>
-            </div>
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
           </div>
-        )}
+        </div>
+      )}
       </section>
     </div>
   );
