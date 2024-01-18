@@ -80,14 +80,14 @@ const Articles = () => {
 
   return (
     <section className="section-news">
+      <div className="header-section">
+        <h3 className="small-title">
+          <span></span>
+          {ARTICLES_TEXT.RECENT_NEWS_TITLE}
+        </h3>
+        <h2 className="title">{ARTICLES_TEXT.NEWS_ARTICLES_TITLE}</h2>
+      </div>
       <div className="container">
-        <div className="header-section">
-          <h3 className="small-title">
-            <span></span>
-            {ARTICLES_TEXT.RECENT_NEWS_TITLE}
-          </h3>
-          <h2 className="title">{ARTICLES_TEXT.NEWS_ARTICLES_TITLE}</h2>
-        </div>
         <Slider {...settings}>
         {fetchedArticles.map((article) => (
           <div className="single-news" key={article.id}>

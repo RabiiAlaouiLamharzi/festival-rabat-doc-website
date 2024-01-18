@@ -1,8 +1,8 @@
 import React from "react";
 import image1 from "../assets/si1.jpeg";
+import image2 from "../assets/si2.jpg";
 import { DETAILS_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
-import LazyLoad from 'react-lazyload';
 
 const Details = () => {
   const { t } = useTranslation();
@@ -35,7 +35,7 @@ const Details = () => {
             </div>
             <div className="nested-grid-item">
               <img
-                src={image1}
+                src={image2}
                 alt="Image A"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />

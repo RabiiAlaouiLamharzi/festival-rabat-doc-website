@@ -80,7 +80,8 @@ const Navbar = () => {
         className={`cd-header ${scrollPosition > 50 ? "navbar-black" : ""}`}
         style={{
           backgroundColor: `rgba(0, 0, 0, ${scrollPosition > 50 ? 0.7 : 0})`,
-          backdropFilter: `blur(${scrollPosition > 50 ? "10px" : "0"})`, // Adjust the blur radius as needed
+          backdropFilter: `blur(${scrollPosition > 50 ? "10px" : "0"})`,
+          width: "100%", // Set the width to 100%
         }}
       >
         <div className="header-wrapper">

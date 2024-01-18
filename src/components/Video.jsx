@@ -12,26 +12,54 @@ const Video = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [stopIcon, setStopIcon] = useState(stopImage);
 
-  const handleIntersection = (entries) => {
-    entries.forEach((entry) => {
-      const video = document.querySelector(".video-player");
+  useEffect(() => {
+    const video = document.querySelector(".video-player");
 
-      if (entry.isIntersecting && !stopRequested) {
-        if (!videoStarted) {
-          video
-            .play()
-            .then(() => {
-              setVideoStarted(true);
-              setStopIcon(stopImage);
-              video.muted = isMuted;
-            })
-            .catch((error) => console.error("Autoplay failed:", error));
+    // Set initial state for videoStarted to false
+    setVideoStarted(false);
+
+    // Set initial state for video.muted
+    const handleLoadedMetadata = () => {
+      video.muted = isMuted;
+    };
+
+    video.addEventListener("loadedmetadata", handleLoadedMetadata);
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !stopRequested && !videoStarted) {
+          video.play().then(() => {
+            setVideoStarted(true);
+            setStopIcon(stopImage);
+          });
+        } else if ((!entry.isIntersecting || stopRequested) && videoStarted) {
+          video.pause();
         }
-      } else if ((!entry.isIntersecting || stopRequested) && videoStarted) {
-        video.pause();
-      }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      threshold: 0.5,
     });
-  };
+
+    observer.observe(video);
+
+    const handleVideoEnd = () => {
+      setTimeout(() => {
+        video.currentTime = 0;
+        video.play();
+      }, 500);
+    };
+
+    video.addEventListener("ended", handleVideoEnd);
+
+    return () => {
+      observer.disconnect();
+      video.removeEventListener("ended", handleVideoEnd);
+      video.removeEventListener("loadedmetadata", handleLoadedMetadata);
+    };
+  }, [isMuted, stopRequested, videoStarted]);
 
   const pauseVideo = () => {
     const video = document.querySelector(".video-player");
@@ -66,35 +94,6 @@ const Video = () => {
     setStopRequested(false);
   };
 
-  useEffect(() => {
-    const video = document.querySelector(".video-player");
-
-    handleIntersection([{ isIntersecting: true }]);
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      threshold: 0.5,
-    });
-
-    observer.observe(video);
-
-    // Event listener for video end
-    const handleVideoEnd = () => {
-      // Replay the video after 500ms
-      setTimeout(() => {
-        video.currentTime = 0; // Reset video to the beginning
-        video.play();
-      }, 500);
-    };
-
-    video.addEventListener("ended", handleVideoEnd);
-
-    return () => {
-      observer.disconnect();
-      video.removeEventListener("ended", handleVideoEnd);
-    };
-  }, []);
-
   return (
     <div className="video-container">
       <div className="video-overlay"></div>
@@ -106,10 +105,10 @@ const Video = () => {
             background: "transparent",
             borderRadius: "50%",
             backgroundColor: "white",
-            paddingTop: "25px",
-            paddingRight: "25px",
-            paddingLeft: "25px",
-            paddingBottom: "20px",
+            paddingTop: "15px",
+            paddingRight: "15px",
+            paddingLeft: "15px",
+            paddingBottom: "10px",
             marginLeft: 0,
             marginRight: 0,
             marginBottom: 0,
@@ -132,10 +131,10 @@ const Video = () => {
             margin: 0,
             marginTop: "6%",
             backgroundColor: "white",
-            paddingTop: "25px",
-            paddingRight: "25px",
-            paddingLeft: "25px",
-            paddingBottom: "20px",
+            paddingTop: "15px",
+            paddingRight: "15px",
+            paddingLeft: "15px",
+            paddingBottom: "10px",
             border: 0,
             boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
           }}

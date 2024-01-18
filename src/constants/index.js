@@ -79,15 +79,15 @@ export const BAR_TEXT =
   };
   
   export const HERO_TEXTS = {
-    TITLE: "Il Est Temps de Regarder Films",
+    TITLE: "Festival international Rabat'Doc Africa",
     PARAGRAPH:
-      "Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500. Lorem Ipsum est simplement du faux texte de l'impression et de la composition. Lorem Ipsum a été le texte factice standard de l'industrie depuis les années 1500.",
-    BUTTON_TEXT: "REGARDER",
+      "Le Festival International Rabat’Doc Africa est un événement mondial consacré au cinéma documentaire africain. Il est mis en place par le Centre Sijilmassa pour les études et les recherches audiovisuelles (CSERA), une entité académique indépendante focalisée sur la culture audiovisuelle affiliée à l'Université Mohammed V.",
+    BUTTON_TEXT: "Découvrez le Festival",
   };
   
   export const INTRO_TEXTS = {
     PARAGRAPH:
-      "Le Festival International Rabat’Doc Africa, organisé par le CSERA (Centre Sijilmassa d'Études et de Recherche Audiovisuelles), met en lumière des films documentaires africains. Du 25 au 29 avril dans la vibrante ville de Rabat, au Maroc, il crée un lien entre l'histoire riche du continent et les aspirations de sa jeunesse pour un avenir meilleur. Cet événement annuel met en avant les liens culturels entre Rabat et l'Afrique, présentant la brillance cinématographique du continent et favorisant la connexion entre l'authenticité de l'Afrique et son identité en évolution.",
+      "Rabat’Doc Africa se concentre sur le cinéma documentaire qui met en avant la diversité du peuple africain. Ce cinéma explore l'unité et la pluralité de ce peuple, imprégné de sa riche culture et porteur de diverses aspirations. Enraciné dans la dimension anthropologique de l'humanité, ce type de cinéma devient un moyen puissant de transmettre la culture. Il symbolise la promesse d'une richesse infinie, née de la diversité ethnique et humaine qui caractérise l'Afrique. Rabat’Doc ne vise pas à célébrer un réalisateur ou une nation en particulier, mais plutôt à rendre hommage à toute l'Afrique et ses habitants.",
   };
   
   export const VIDEO_PLAYER = {

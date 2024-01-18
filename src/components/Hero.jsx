@@ -53,16 +53,14 @@ const Hero = () => {
 
   return (
     <div
-      className="hero-container"
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        height: "70vh", // Set height to 70% of the viewport height
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    className="hero-container"
+    style={{
+      position: "relative",
+      overflow: "hidden",
+      height: "auto",
+      minHeight: "720px", // Set a minimum height for visibility
+    }}
+  >
       <div
         className="progress-bar"
         style={{
@@ -88,7 +86,7 @@ const Hero = () => {
           <div
             style={{
               marginLeft: "auto",
-              marginRight: "5%",
+              marginRight: "10%",
               display: "flex",
               alignItems: "center",
             }}

@@ -8,6 +8,7 @@ html {
 * {
   margin: 0;
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 body {
   font-family: "DM Sans", sans-serif;
@@ -36,8 +37,8 @@ body {
 
 .header-wrapper {
   position: relative;
-  width: calc(100% - 100px);
-  margin-left: 50px;
+  width: calc(100% - 65px);
+  margin-left: 35px;
 }
 
 .logo-wrap {
@@ -50,7 +51,7 @@ body {
 
 .logo-wrap img {
   width: 15vh; /* Use vw instead of vh for responsiveness */
-  padding-top: 5.5%;
+  padding-top: 7.5%;
   height: auto;
   filter: brightness(3%) invert(100%);
 }
@@ -549,7 +550,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   font-family: "Kanit", sans-serif;
   z-index: 10;
   margin-top: 18vh;
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .text-container p {
@@ -566,7 +567,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 .text-container h2 {
   opacity: 0.7;
   padding-bottom: 1%;
-  font-size: 90px;
+  font-size: 80px;
   font-family: "PT Serif", serif;
   margin-right: 5%;
   line-height: 1;
@@ -580,7 +581,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   border: 2px solid gold;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   font-family: "PT Serif", serif;
   align-self: flex-end;
@@ -626,7 +627,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   }
 
   .text-container h2 {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   .text-container button {
@@ -635,19 +636,22 @@ body.nav-active .nav__list-item:nth-child(10) {
   }
 
   .text-container .buttonClass {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
 /* Additional media query for larger screens */
 @media screen and (max-width: 800px) {
+  .text-container .arrows-container {
+    visibility: hidden;
+  }
   .text-container h2 {
     font-size: 50px;
     padding-bottom: 2%;
   }
 
   .text-container p {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .text-container button {
@@ -664,8 +668,36 @@ body.nav-active .nav__list-item:nth-child(10) {
   }
 }
 
+/* Additional media query for larger screens */
+@media screen and (max-width: 600px) {
+  .text-container .arrows-container {
+    visibility: hidden;
+  }
+  .text-container h2 {
+    font-size: 40px;
+    padding-bottom: 2%;
+  }
+
+  .text-container p {
+    font-size: 17px;
+  }
+
+  .text-container button {
+    font-size: 30px;
+  }
+
+  .text-container button {
+    padding: 15px 30px;
+    font-size: 40px;
+  }
+
+  .text-container .buttonClass {
+    font-size: 20px;
+  }
+}
+
 .moving-bar-container {
-  overflow: hidden;
+  overflow-x: visible !important;
   position: relative;
   padding-bottom: 0.4%;
   padding-top: 0.4%;
@@ -676,11 +708,13 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 .moving-bar {
   display: flex;
+  overflow-x: visible !important;
   white-space: nowrap;
   animation: moveBar 10s linear infinite; /* Adjust the animation duration as needed */
 }
 
 .moving-bar span {
+  overflow-x: visible !important;
   padding-right: 20px; /* Adjust the spacing between repeated text as needed */
 }
 
@@ -767,6 +801,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 .full-height-container {
   height: auto;
+  overflow-x: visible !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -776,12 +811,14 @@ body.nav-active .nav__list-item:nth-child(10) {
 .grid-container-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  overflow-x: visible !important;
   gap: 4vw;
   height: 60%;
 }
 
 .grid-item {
   position: relative;
+  overflow-x: visible !important;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -791,14 +828,17 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .centered-content1 {
+  overflow-x: visible !important;
   height: 100%;
 }
 
 .centered-content2 {
+  overflow-x: visible !important;
   height: 100%;
 }
 
 .vertical-image {
+  overflow-x: visible !important;
   width: 40px;
   height: 100%;
   background-image: url("./assets/african-design.jpg");
@@ -807,6 +847,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-container {
+  overflow-x: visible !important;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 3vh;
@@ -814,6 +855,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-container2 {
+  overflow-x: visible !important;
   display: grid;
   gap: 2vw;
   grid-template-columns: repeat(3, 1fr); /* Updated to columns */
@@ -821,6 +863,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-item-p {
+  overflow-x: visible !important;
   border: 3px solid rgb(0, 0, 0);
   text-align: start;
   font-size: 16px;
@@ -833,6 +876,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-item {
+  overflow-x: visible !important;
   border: 1px solid #ccc;
   text-align: start;
   font-weight: bold;
@@ -840,6 +884,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-item2 {
+  overflow-x: visible !important;
   border: 1px solid rgb(66, 2, 2);
   text-align: start;
   font-weight: bold;
@@ -851,10 +896,12 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nested-grid-item-gap {
+  overflow-x: visible !important;
   margin-right: 5px;
 }
 
 .Sijlmassa {
+  overflow-x: visible !important;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.2;
@@ -862,6 +909,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .titleSijlmassa {
+  overflow-x: visible !important;
   font-size: 40px;
   line-height: 1;
   padding-bottom: 2rem;
@@ -869,12 +917,14 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .video-container {
+  overflow-x: visible !important;
   position: relative;
   width: 100%;
   height: 50%;
 }
 
 .video-controls {
+  overflow-x: visible !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -886,6 +936,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .play-pause-button {
+  overflow-x: visible !important;
   background: transparent;
   border-radius: 100px;
   width: 50px;
@@ -1143,6 +1194,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .filmstrip-wrapper {
+  overflow-x: visible !important;
   border-top: 1 px solid gray;
   border-bottom: 1 px solid gray;
   animation: filmstrip-animation 5s linear infinite;
@@ -1151,6 +1203,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .filmstrip {
+  overflow-x: visible !important;
   background-color: black;
   white-space: nowrap;
   width: 200vw;
@@ -1169,6 +1222,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .filmstrip-frame {
+  overflow-x: visible !important;
   background-color: rgb(250, 249, 243);
   border-radius: 0px;
   display: inline-block;
@@ -1183,6 +1237,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   align-items: center;
 }
 .filmstrip-frame img {
+  overflow-x: visible !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1257,8 +1312,8 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .original-button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: auto;
   background: transparent;
   border: 2px solid goldenrod;
@@ -1269,7 +1324,6 @@ body.nav-active .nav__list-item:nth-child(10) {
   font-size: 20px;
   font-weight: 500;
   font-family: "PT Serif", serif;
-  text-transform: uppercase;
   line-height: 1;
 }
 
@@ -1397,15 +1451,18 @@ a:hover {
 }
 
 .section-news {
+  overflow-x: visible !important;
   padding: 0% 15% 5% 15%;
   background-color: rgb(0, 0, 0);
 }
 
 .section-news .header-section {
+  overflow-x: visible !important;
   margin-bottom: 8px;
 }
 
 .section-news .header-section .small-title {
+  overflow-x: visible !important;
   position: relative;
   text-transform: uppercase;
   color: #ffffff;
@@ -1413,6 +1470,7 @@ a:hover {
 }
 
 .section-news .header-section .small-title span {
+  overflow-x: visible !important;
   display: inline-block;
   height: 2px;
   width: 20px;
@@ -1422,7 +1480,7 @@ a:hover {
 }
 
 .section-news .header-section .title {
-  text-transform: uppercase;
+  overflow-x: visible !important;
   font-weight: 700;
   color: #ffffff;
   font-size: 40px;
@@ -1430,20 +1488,24 @@ a:hover {
 }
 
 .section-news .single-news {
+  overflow-x: visible !important;
   margin-top: 30px;
   box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.15);
   height: 700px;
 }
 
 .section-news .single-news img {
+  overflow-x: visible !important;
   width: 100%;
 }
 
 .section-news .single-news .content {
   padding: 35px;
+  overflow-x: visible !important;
 }
 
 .section-news .single-news .date {
+  overflow-x: visible !important;
   display: inline-block;
   margin-bottom: 15px;
   background-color: #000;
@@ -1454,6 +1516,7 @@ a:hover {
 }
 
 .section-news .single-news .title {
+  overflow-x: visible !important;
   margin-bottom: 12px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1463,27 +1526,32 @@ a:hover {
 }
 
 .section-news .single-news .title a {
+  overflow-x: visible !important;
   text-decoration: none;
   color: goldenrod;
   font-family: "PT Serif", serif;
 }
 
 .section-news .single-news .title a:hover {
+  overflow-x: visible !important;
   text-decoration: underline 3px;
 }
 
 .section-news .single-news .text {
+  overflow-x: visible !important;
   font-size: 16px;
   line-height: 1.2;
   color: #000;
 }
 
 .section-news .single-news .likes {
+  overflow-x: visible !important;
   margin-right: 28px;
 }
 
 .section-news .single-news .likes,
 .section-news .single-news .comments {
+  overflow-x: visible !important;
   text-transform: uppercase;
   font-weight: 600;
   color: rgb(0, 0, 0);
@@ -1495,6 +1563,7 @@ a:hover {
 
 .section-news .single-news .likesWord,
 .section-news .single-news .commentsWord {
+  overflow-x: visible !important;
   text-transform: uppercase;
   font-weight: 300;
   color: rgb(0, 0, 0);
@@ -1508,11 +1577,14 @@ a:hover {
 }
 
 .custom-arrow {
+  overflow-x: visible !important;
   position: absolute;
   transform: translateY(-50%);
   font-size: 30px; /* Adjust the font size as needed */
   color: white; /* Set the arrow color to white */
   background-color: transparent; /* Set the background color to transparent */
+  margin-top: 40px;
+  z-index: 100;
   padding-left: 10px;
   padding-right: 10px;
   border: 2px solid white; /* Add white border */
@@ -1522,46 +1594,56 @@ a:hover {
 }
 
 .custom-arrow:hover {
+  overflow-x: visible !important;
   background-color: rgb(255, 255, 255);
   color: black; /* Change background color on hover to gold */
 }
 
 .next-arrow {
+  overflow-x: visible !important;
   right: 0%;
   top: -1%;
 }
 
 .prev-arrow {
+  overflow-x: visible !important;
   right: 3.5rem;
   top: -1%;
 }
 
 .custom-arrow span {
+  overflow-x: visible !important;
   display: block;
 }
 
 @media (max-width: 1500px) {
   .section-news .header-section .title {
-    font-size: 25px;
+    overflow-x: visible !important;
+    font-size: 35px;
   }
   .section-news .header-section .small-title {
-    font-size: 10px;
+    overflow-x: visible !important;
+    font-size: 15px;
   }
 
   .section-news .single-news .content {
+    overflow-x: visible !important;
     padding: 25px;
   }
 
   .section-news .single-news .title {
+    overflow-x: visible !important;
     font-size: 25px;
   }
 
   .section-news .single-news .text {
+    overflow-x: visible !important;
     font-size: 16px;
   }
 
   .section-news .single-news .likes,
   .section-news .single-news .comments {
+    overflow-x: visible !important;
     font-size: 18px;
     padding-right: 3%;
   }
@@ -1569,89 +1651,109 @@ a:hover {
 
 @media (max-width: 1200px) {
   .section-news .header-section .title {
-    font-size: 5px;
+    overflow-x: visible !important;
+    font-size: 25px;
   }
   .section-news .header-section .small-title {
-    font-size: 10px;
+    overflow-x: visible !important;
+    font-size: 15px;
   }
   .next-arrow {
+    overflow-x: visible !important;
     right: 0%;
     top: -1%;
   }
 
   .prev-arrow {
+    overflow-x: visible !important;
     right: 3.5rem;
     top: -1%;
   }
   .section-news .single-news .content {
+    overflow-x: visible !important;
     padding: 25px;
   }
 
   .section-news .single-news .title {
+    overflow-x: visible !important;
     font-size: 25px;
   }
 
   .section-news .single-news .text {
+    overflow-x: visible !important;
     font-size: 16px;
   }
 
   .section-news .single-news .likes,
   .section-news .single-news .comments {
+    overflow-x: visible !important;
     font-size: 18px;
   }
 
   .section-news .single-news .likes {
+    overflow-x: visible !important;
     margin-right: 18px;
   }
 }
 
 @media (max-width: 600px) {
   .section-news .header-section .title {
-    font-size: 15px;
+    overflow-x: visible !important;
+    font-size: 25px;
   }
   .section-news .header-section .small-title {
+    overflow-x: visible !important;
     font-size: 15px;
   }
   .custom-arrow {
+    overflow-x: visible !important;
     font-size: 20px;
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 3px;
   }
   .next-arrow {
+    overflow-x: visible !important;
     right: 0%;
     top: -1%;
   }
 
   .prev-arrow {
+    overflow-x: visible !important;
     right: 2.6rem;
     top: -1%;
   }
   .section-news .single-news .content {
+    overflow-x: visible !important;
     padding: 25px;
   }
 
   .section-news .single-news .title {
+    overflow-x: visible !important;
     font-size: 22px;
   }
 
   .section-news .single-news .text {
+    overflow-x: visible !important;
     font-size: 16px;
   }
 
   .section-news .single-news .likes,
   .section-news .single-news .comments {
+    overflow-x: visible !important;
     font-size: 15px;
   }
 }
 
 footer {
   background-color: black;
+  overflow-x: visible !important;
   font-family: "Lato", sans-serif;
   padding: 85px 0 245px 0;
 }
 
 .footer-inner {
+  overflow-x: visible !important;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -1661,21 +1763,25 @@ footer {
 }
 
 .footer-item {
+  overflow-x: visible !important;
   float: left;
   margin: 0 3.5% 0 0;
   padding: 0;
 }
 
 .footer-item:nth-of-type(4) {
+  overflow-x: visible !important;
   display: none;
 }
 
 .footer-item:nth-of-type(7) {
+  overflow-x: visible !important;
   float: right;
   margin-right: 0;
 }
 
 .footer-button {
+  overflow-x: visible !important;
   color: white;
   position: relative;
   font-weight: 400;
@@ -1686,6 +1792,7 @@ footer {
 }
 
 .footer-button:after {
+  overflow-x: visible !important;
   content: "";
   position: absolute;
   top: 45px;
@@ -1697,11 +1804,13 @@ footer {
 }
 
 .footer-button:hover {
+  overflow-x: visible !important;
   color: black;
   background-color: white;
 }
 
 .footer-button:hover:after {
+  overflow-x: visible !important;
   width: 112px;
   right: 0px;
 }
