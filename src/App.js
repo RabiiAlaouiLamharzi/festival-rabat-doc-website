@@ -1,111 +1,80 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Bar from "./components/Bar";
-import Video from "./components/Video";
-import Intro from "./components/Intro";
-import Details from "./components/Details";
-import Winners from "./components/Winners";
-import Sponsors from "./components/Sponsors";
-import Buttons from "./components/Buttons";
-import Articles from "./components/Articles";
-import image1 from "./assets/african-design.jpg";
-import Footer from "./components/Footer";
+import React, { lazy, useEffect, useState, Suspense } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Preloader from "./components/Preloader";
+import image1 from "./assets/african-design.jpg";
+
+const Navbar = lazy(() => import('./components/Navbar'));
+const Hero = lazy(() => import('./components/Hero'));
+const Bar = lazy(() => import('./components/Bar'));
+const Video = lazy(() => import('./components/Video'));
+const Intro = lazy(() => import('./components/Intro'));
+const Details = lazy(() => import('./components/Details'));
+const Winners = lazy(() => import('./components/Winners'));
+const Sponsors = lazy(() => import('./components/Sponsors'));
+const Buttons = lazy(() => import('./components/Buttons'));
+const Articles = lazy(() => import('./components/Articles'));
+const Footer = lazy(() => import('./components/Footer'));
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState({
+    navbar: false,
+    hero: false,
+    bar: false,
+    video: false,
+    intro: false,
+    details: false,
+    winners: false,
+    sponsors: false,
+    buttons: false,
+    articles: false,
+    footer: false,
+  });
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (component) => {
       try {
         // Simulating an asynchronous data fetch
         // Replace this with your actual data fetching logic
-        await new Promise((resolve) => setTimeout(resolve, 40000));
+        await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulated fetch time
 
-        // Once the data is loaded, update the state to stop showing the preloader
-        setIsLoading(false);
+        // Once the data is loaded, update the state for the specific component
+        setIsLoaded((prev) => ({ ...prev, [component]: true }));
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error(`Error fetching data for ${component}:`, error);
         // Handle errors if needed
       }
     };
 
-    fetchData();
-  }, []);
+    // Fetch data for each component
+    Object.keys(isLoaded).forEach((component) => fetchData(component));
+  }, []); // Run only once on component mount
+
+  const allComponentsLoaded = Object.values(isLoaded).every((loaded) => loaded);
 
   return (
-    <>
-      {isLoading && <Preloader />}
-      {!isLoading && (
-        <BrowserRouter>
-      <div className="relative z-0 bg-white">
-        <div id="navbar">
-          <Navbar />
+    <Suspense fallback={<Preloader />}>
+      <BrowserRouter>
+        <div className="relative z-0 bg-white">
+          {!allComponentsLoaded && <Preloader />}
+          {allComponentsLoaded && (
+            <div>
+              <Navbar />
+              <Hero />
+              <Bar />
+              <Intro />
+              {/* Add your other components here */}
+              <Details />
+              <Video />
+              <Winners />
+              <Sponsors />
+              <Buttons />
+              <Articles />
+              <Footer />
+            </div>
+          )}
         </div>
-        <div id="hero">
-          <Hero />
-        </div>
-        <div id="bar">
-          <Bar />
-        </div>
-        <div id="intro">
-          <Intro />
-        </div>
-        <div
-          style={{
-            height: "5px",
-            backgroundColor: "Goldenrod",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-          }}
-        ></div>
-        <div id="details">
-          <Details />
-        </div>
-        <div
-          style={{
-            height: "5px",
-            backgroundColor: "black",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-          }}
-        ></div>
-        <div id="video">
-          <Video />
-        </div>
-        <div
-          style={{
-            height: "5px",
-            backgroundColor: "black",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-          }}
-        ></div>
-        <div id="winners">
-          <Winners />
-        </div>
-        <div id="sponsors">
-          <Sponsors />
-        </div>
-        <div id="buttons">
-          <Buttons />
-        </div>
-        <div id="articles">
-          <Articles />
-        </div>
-        <div
-          style={{
-            height: "2.5rem",
-            backgroundImage: `url(${image1})`,
-          }}
-        ></div>
-        <center></center>
-        <div id="footer">
-          <Footer />
-        </div>
-      </div>
-    </BrowserRouter>
-      )}
-    </>
+      </BrowserRouter>
+    </Suspense>
   );
 };
 
