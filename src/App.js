@@ -22,7 +22,7 @@ const App = () => {
       try {
         // Simulating an asynchronous data fetch
         // Replace this with your actual data fetching logic
-        await new Promise((resolve) => setTimeout(resolve, 10000));
+        await new Promise((resolve) => setTimeout(resolve, 12000));
 
         // Once the data is loaded, update the state to stop showing the preloader
         setIsLoading(false);
@@ -35,10 +35,11 @@ const App = () => {
     fetchData();
   }, []);
 
-  return isLoading ? (
-    <Preloader />
-  ) : (
-    <BrowserRouter>
+  return (
+    <>
+      {isLoading && <Preloader />}
+      {!isLoading && (
+        <BrowserRouter>
       <div className="relative z-0 bg-white">
         <div id="navbar">
           <Navbar />
@@ -103,6 +104,8 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+      )}
+    </>
   );
 };
 

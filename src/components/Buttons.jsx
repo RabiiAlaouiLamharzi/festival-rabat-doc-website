@@ -19,7 +19,7 @@ const OriginalButtons = () => {
 
   return (
     <>
-      <div className="original-buttons-container">
+      <div className="original-buttons-container" style={{ overflowY: "hidden" }}>
         {buttonContent.map((button, index) => (
           <button
             key={index}
