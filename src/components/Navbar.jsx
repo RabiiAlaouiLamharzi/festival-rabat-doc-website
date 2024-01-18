@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo_redsea.png";
+import logo from "../assets/festi-logo.png";
 import { NAVBAR_TEXTS } from "../constants/index.js";
 import axios from "axios";
 import { useTranslation } from "react-i18next";

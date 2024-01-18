@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
 import ArticleDetail from "../pages/ArticleDetail";
 import { ARTICLES_TEXT } from "../constants/index.js";
-import image from "../assets/articles_image.png";
+import image from "../assets/articles_image.jpg";
 import closeImage from '../assets/close.png';
 
 const Articles = () => {

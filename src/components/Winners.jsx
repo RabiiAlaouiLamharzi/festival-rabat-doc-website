@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import image1 from "../assets/win1.png";
-import image2 from "../assets/win2.png";
-import image3 from "../assets/win3.png";
-import image4 from "../assets/win4.png";
-import image5 from "../assets/win5.png";
+import image1 from "../assets/win1.jpg";
+import image2 from "../assets/win2.jpg";
+import image3 from "../assets/win3.jpg";
+import image4 from "../assets/win4.jpg";
+import image5 from "../assets/win5.jpg";
 import placeholderImage from "../assets/placeholder.png";
 import { WINNERS_TEXTS } from "../constants/index.js";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/festi-logo-again.png";
 import { FOOTER_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
 

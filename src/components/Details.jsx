@@ -2,6 +2,7 @@ import React from "react";
 import image1 from "../assets/si1.jpeg";
 import { DETAILS_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
+import LazyLoad from 'react-lazyload';
 
 const Details = () => {
   const { t } = useTranslation();

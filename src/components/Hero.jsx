@@ -3,6 +3,7 @@ import image1 from "../assets/hero1.jpg";
 import image2 from "../assets/hero2.jpg";
 import { HERO_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
+import LazyLoad from 'react-lazyload';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -110,16 +111,20 @@ const Hero = () => {
       </div>
 
       <div className="image-container">
+        <LazyLoad>
         <img
           className={`fade-image ${showImage1 ? "visible" : ""}`}
           src={image1}
           alt="rfced"
         />
+        </LazyLoad>
+        <LazyLoad>
         <img
           className={`fade-image ${!showImage1 ? "visible" : ""}`}
           src={image2}
           alt="rfced"
         />
+        </LazyLoad>
       </div>
     </div>
   );

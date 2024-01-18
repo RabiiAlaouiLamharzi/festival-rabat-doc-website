@@ -49,10 +49,10 @@ body {
 }
 
 .logo-wrap img {
-  width: 30vh; /* Use vw instead of vh for responsiveness */
-  padding-top: 7.5%;
+  width: 15vh; /* Use vw instead of vh for responsiveness */
+  padding-top: 5.5%;
   height: auto;
-  filter: invert(100%);
+  filter: brightness(3%) invert(100%);
 }
 
 .logo-wrap a {
@@ -145,8 +145,10 @@ body {
 
 @media (max-width: 600px) {
   .logo-wrap img {
-    width: 20vh;
     padding-top: 11%;
+  }
+  .logo-wrap a {
+    font-size: 10px;
   }
   .language-button {
     font-size: 30px;
@@ -564,7 +566,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 .text-container h2 {
   opacity: 0.7;
   padding-bottom: 1%;
-  font-size: 100px;
+  font-size: 90px;
   font-family: "PT Serif", serif;
   margin-right: 5%;
   line-height: 1;
@@ -615,7 +617,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 /* Additional media query for larger screens */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   .text-container p {
     font-size: 22px;
     text-align: justify;
@@ -640,8 +642,16 @@ body.nav-active .nav__list-item:nth-child(10) {
 /* Additional media query for larger screens */
 @media screen and (max-width: 800px) {
   .text-container h2 {
-    font-size: 60px;
+    font-size: 50px;
     padding-bottom: 2%;
+  }
+
+  .text-container p {
+    font-size: 20px;
+  }
+
+  .text-container button {
+    font-size: 30px;
   }
 
   .text-container button {
@@ -1415,7 +1425,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
-  font-size: 45px;
+  font-size: 40px;
   font-family: "PT Serif", serif;
 }
 
@@ -1448,7 +1458,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: 700;
   font-family: "PT Serif", serif;
-  font-size: 29px;
+  font-size: 25px;
   line-height: 1.1;
 }
 
@@ -1463,7 +1473,7 @@ a:hover {
 }
 
 .section-news .single-news .text {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   color: #000;
 }
@@ -1532,7 +1542,7 @@ a:hover {
 
 @media (max-width: 1500px) {
   .section-news .header-section .title {
-    font-size: 40px;
+    font-size: 25px;
   }
   .section-news .header-section .small-title {
     font-size: 10px;
@@ -1547,7 +1557,7 @@ a:hover {
   }
 
   .section-news .single-news .text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .section-news .single-news .likes,
@@ -1559,10 +1569,10 @@ a:hover {
 
 @media (max-width: 1200px) {
   .section-news .header-section .title {
-    font-size: 35px;
+    font-size: 5px;
   }
   .section-news .header-section .small-title {
-    font-size: 15px;
+    font-size: 10px;
   }
   .next-arrow {
     right: 0%;
@@ -1578,11 +1588,11 @@ a:hover {
   }
 
   .section-news .single-news .title {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .section-news .single-news .text {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .section-news .single-news .likes,
@@ -1597,7 +1607,7 @@ a:hover {
 
 @media (max-width: 600px) {
   .section-news .header-section .title {
-    font-size: 25px;
+    font-size: 15px;
   }
   .section-news .header-section .small-title {
     font-size: 15px;
@@ -1622,11 +1632,11 @@ a:hover {
   }
 
   .section-news .single-news .title {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .section-news .single-news .text {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .section-news .single-news .likes,
@@ -1646,13 +1656,14 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px;
-  max-width: 1170px;
+  max-width: 1270px;
   position: relative;
 }
 
 .footer-item {
   float: left;
-  margin: 0 6.9% 0 0;
+  margin: 0 3.5% 0 0;
+  padding: 0;
 }
 
 .footer-item:nth-of-type(4) {
@@ -1777,6 +1788,14 @@ a:hover {
   display: block;
 }
 
+@media (max-width: 1400px) {
+
+  .footer-button {
+    visibility: hidden;
+  }
+
+}
+
 @media (max-width: 1150px) {
   footer {
     padding: 50px 0 70px 0 !important;
@@ -1791,6 +1810,10 @@ a:hover {
   .footer-item {
     margin: 0 0 42px 0;
     width: 50%;
+  }
+
+  .footer-button {
+    visibility: hidden;
   }
 
   .footer-item:nth-of-type(1) {
@@ -1829,7 +1852,8 @@ a:hover {
 }
 
 .footer-logo1 {
-  width: 40%;
+  width: 30%;
+  filter: invert(100%);
 }
 
 @media (max-width: 1150px) {
@@ -1844,6 +1868,9 @@ a:hover {
     top: 100%;
     clear: both;
     display: block;
+  }
+  .footer-button {
+    visibility: hidden;
   }
 }
 
