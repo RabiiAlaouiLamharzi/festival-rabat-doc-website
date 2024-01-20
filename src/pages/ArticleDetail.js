@@ -117,6 +117,7 @@ const ArticleContent = ({ article }) => {
       <style>
         {`
           .article {
+            overflow-x: visible !important;
             margin: 60px auto;
             padding-left: 25%;
             padding-right: 25%;
@@ -124,12 +125,14 @@ const ArticleContent = ({ article }) => {
 
           @media (max-width: 1200px) {
             .article {
+              overflow-x: visible !important;
               padding-left: 10%;
               padding-right: 10%;
             }
           }
 
           h1 {
+            overflow-x: visible !important;
             color: goldenrod;
             font-size: 46px;
             letter-spacing: 1px;
@@ -138,28 +141,31 @@ const ArticleContent = ({ article }) => {
             margin-bottom: 50px;
             margin-top: 10px;
             font-weight: 800;
-            font-family: "PT Serif", serif;
+            font-family: "Trocchi", serif !important;
           }
 
           h2 {
+            overflow-x: visible !important;
             color: goldenrod;
             font-size: 36px;
             text-transform: uppercase;
             margin-top: 30px;
             font-weight: 800;
-            font-family: "PT Serif", serif;
+            font-family: "Trocchi", serif !important;
           }
 
           h2 span {
+            overflow-x: visible !important;
             color: white;
             font-size: 36px;
             text-transform: uppercase;
             margin-top: 30px;
             font-weight: 800;
-            font-family: "PT Serif", serif;
+            font-family: "Trocchi", serif !important;
           }
 
           p {
+            overflow-x: visible !important;
             font-size: 18px;
             line-height: 1.8;
             margin-bottom: 30px;
@@ -168,6 +174,7 @@ const ArticleContent = ({ article }) => {
           }
 
           a {
+            overflow-x: visible !important;
             color: darken(skyblue, 5%);
             text-decoration: none;
             border-bottom: 1px solid transparent;
@@ -175,18 +182,22 @@ const ArticleContent = ({ article }) => {
           }
 
           a:hover {
+            overflow-x: visible !important;
             border-bottom: 1px solid skyblue;
           }
           section {
+            overflow-x: visible !important;
             margin-bottom: 40px;
           }
 
           label {
+            overflow-x: visible !important;
             margin-bottom: 10px;
           }
 
           input,
           textarea {
+            overflow-x: visible !important;
             width: 100%;
             padding: 8px;
             margin-bottom: 16px;
@@ -196,6 +207,7 @@ const ArticleContent = ({ article }) => {
           }
 
           button {
+            overflow-x: visible !important;
             background-color: transparent;
             color: goldenrod;
             padding: 10px;
@@ -211,6 +223,7 @@ const ArticleContent = ({ article }) => {
           }
 
           button:hover {
+            overflow-x: visible !important;
             background-color: goldenrod;
             color: #000;
             font-weight: 800;
@@ -218,40 +231,48 @@ const ArticleContent = ({ article }) => {
 
           /* Additional styles for comments */
           .comments-wrapper {
+            overflow-x: visible !important;
             max-height: 200px; /* Set a max height for the comments section */
             overflow-y: hidden; /* Add a vertical scrollbar if needed */
             margin-top: 10px; /* Adjust the top margin to create space */
           }
 
           ul {
+            overflow-x: visible !important;
             list-style: none;
             padding: 0;
             margin: 0;
           }
 
           li {
+            overflow-x: visible !important;
             margin-bottom: 20px;
             font-family: "DM Sans", sans-serif;
           }
 
           p {
+            overflow-x: visible !important;
             margin: 0;
             font-family: "DM Sans", sans-serif;
           }
 
           strong {
+            overflow-x: visible !important;
             font-weight: bold;
           }
 
           small {
+            overflow-x: visible !important;
             color: #888;
           }
 
           label{
+            overflow-x: visible !important;
             font-family: "DM Sans", sans-serif;
             font-size: 18px;
           }
           .heart {
+            overflow-x: visible !important;
             width: 100px;
             height: 100px;
             background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
@@ -262,17 +283,20 @@ const ArticleContent = ({ article }) => {
           }
 
           .heart.is-active {
+            overflow-x: visible !important;
             transition-duration: 1s;
             background-position: -2800px 0;
           }
 
           .placement {
+            overflow-x: visible !important;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
           }
           .modal {
+            overflow-x: visible !important;
             display: block;
             position: fixed;
             z-index: 1;
@@ -285,6 +309,7 @@ const ArticleContent = ({ article }) => {
           }
 
           .modal-content {
+            overflow-x: visible !important;
             background-color: red;
             margin: 15% auto;
             padding: 20px;
@@ -293,6 +318,7 @@ const ArticleContent = ({ article }) => {
           }
 
           .close {
+            overflow-x: visible !important;
             background-color: white;
             float: right;
             font-size: 28px;

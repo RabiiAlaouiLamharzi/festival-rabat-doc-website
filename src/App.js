@@ -1,80 +1,114 @@
-import React, { lazy, useEffect, useState, Suspense } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Preloader from "./components/Preloader";
-import image1 from "./assets/african-design.jpg";
 
-const Navbar = lazy(() => import('./components/Navbar'));
-const Hero = lazy(() => import('./components/Hero'));
-const Bar = lazy(() => import('./components/Bar'));
-const Video = lazy(() => import('./components/Video'));
-const Intro = lazy(() => import('./components/Intro'));
-const Details = lazy(() => import('./components/Details'));
-const Winners = lazy(() => import('./components/Winners'));
-const Sponsors = lazy(() => import('./components/Sponsors'));
-const Buttons = lazy(() => import('./components/Buttons'));
-const Articles = lazy(() => import('./components/Articles'));
-const Footer = lazy(() => import('./components/Footer'));
+// Lazy-loaded components
+const LazyHero = lazy(() => import("./components/Hero"));
+const LazyBar = lazy(() => import("./components/Bar"));
+const LazyVideo = lazy(() => import("./components/Video"));
+const LazyIntro = lazy(() => import("./components/Intro"));
+const LazyDetails = lazy(() => import("./components/Details"));
+const LazyWinners = lazy(() => import("./components/Winners"));
+const LazySponsors = lazy(() => import("./components/Sponsors"));
+const LazyButtons = lazy(() => import("./components/Buttons"));
+const LazyArticles = lazy(() => import("./components/Articles"));
+const LazyFooter = lazy(() => import("./components/Footer"));
+const LazyDeco = lazy(() => import("./components/Decorative"));
 
 const App = () => {
-  const [isLoaded, setIsLoaded] = useState({
-    navbar: false,
-    hero: false,
-    bar: false,
-    video: false,
-    intro: false,
-    details: false,
-    winners: false,
-    sponsors: false,
-    buttons: false,
-    articles: false,
-    footer: false,
-  });
-
-  useEffect(() => {
-    const fetchData = async (component) => {
-      try {
-        // Simulating an asynchronous data fetch
-        // Replace this with your actual data fetching logic
-        await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulated fetch time
-
-        // Once the data is loaded, update the state for the specific component
-        setIsLoaded((prev) => ({ ...prev, [component]: true }));
-      } catch (error) {
-        console.error(`Error fetching data for ${component}:`, error);
-        // Handle errors if needed
-      }
-    };
-
-    // Fetch data for each component
-    Object.keys(isLoaded).forEach((component) => fetchData(component));
-  }, []); // Run only once on component mount
-
-  const allComponentsLoaded = Object.values(isLoaded).every((loaded) => loaded);
-
   return (
-    <Suspense fallback={<Preloader />}>
-      <BrowserRouter>
-        <div className="relative z-0 bg-white">
-          {!allComponentsLoaded && <Preloader />}
-          {allComponentsLoaded && (
-            <div>
-              <Navbar />
-              <Hero />
-              <Bar />
-              <Intro />
-              {/* Add your other components here */}
-              <Details />
-              <Video />
-              <Winners />
-              <Sponsors />
-              <Buttons />
-              <Articles />
-              <Footer />
-            </div>
-          )}
+    <BrowserRouter>
+      <div className="relative z-0 bg-white">
+        <div id="navbar">
+          <Navbar />
         </div>
-      </BrowserRouter>
-    </Suspense>
+        <div id="hero">
+          <Suspense fallback={<Preloader />}>
+            <LazyHero />
+          </Suspense>
+        </div>
+        <div id="bar">
+          <Suspense fallback={<Preloader />}>
+            <LazyBar />
+          </Suspense>
+        </div>
+        <div
+          style={{
+            height: "5px",
+            backgroundColor: "Goldenrod",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          }}
+        ></div>
+        <div id="intro">
+          <Suspense fallback={<Preloader />}>
+            <LazyIntro />
+          </Suspense>
+        </div>
+        <div
+          style={{
+            height: "5px",
+            backgroundColor: "black",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          }}
+        ></div>
+        <div id="details">
+          <Suspense fallback={<Preloader />}>
+            <LazyDetails />
+          </Suspense>
+        </div>
+        <div
+          style={{
+            height: "5px",
+            backgroundColor: "black",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          }}
+        ></div>
+        <div id="video">
+          <Suspense fallback={<Preloader />}>
+            <LazyVideo />
+          </Suspense>
+        </div>
+        <div
+          style={{
+            height: "5px",
+            backgroundColor: "black",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+          }}
+        ></div>
+        <div id="winners">
+          <Suspense fallback={<Preloader />}>
+            <LazyWinners />
+          </Suspense>
+        </div>
+        <div id="sponsors">
+          <Suspense fallback={<Preloader />}>
+            <LazySponsors />
+          </Suspense>
+        </div>
+        <div id="buttons">
+          <Suspense fallback={<Preloader />}>
+            <LazyButtons />
+          </Suspense>
+        </div>
+        <div id="articles">
+          <Suspense fallback={<Preloader />}>
+            <LazyArticles />
+          </Suspense>
+        </div>
+        <div id="decorative">
+          <Suspense fallback={<Preloader />}>
+            <LazyDeco />
+          </Suspense>
+        </div>
+        <center></center>
+        <div id="footer">
+          <Suspense fallback={<Preloader />}>
+            <LazyFooter />
+          </Suspense>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 };
 

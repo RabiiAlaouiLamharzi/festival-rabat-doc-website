@@ -24,8 +24,7 @@ export const BAR_TEXT =
       text: "En plus de la compétition officielle, Rabat'Doc a présenté au grand public et aux cinéphiles une sélection de films documentaires sur le continent africain. La section Panorama a introduit le vrai cinéma à un large public dans ses dimensions esthétiques et thématiques.",
     },
     {
-      title: "Production Nationale",
-      text: "Rabat'Doc a tenu à honorer le cinéma marocain en organisant des projections dédiées à la production documentaire nationale. Les projections ont eu lieu en présence des réalisateurs des films.",
+      title: "ARCHIVES 2023",
     },
     {
       title: "Ateliers",

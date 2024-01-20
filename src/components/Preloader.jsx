@@ -50,34 +50,6 @@ const Preloader = () => {
             repeatCount="indefinite" />
         </path>
       </svg>
-      <div
-        style={{
-          width: '10%', // Adjust the width as needed
-          height: '8px', // Adjust the height as needed
-          background: '#ccc', // Set the background color of the charging bar to grey
-          marginTop: '20px', // Adjust the margin as needed
-          position: 'relative',
-          borderRadius: '50px',
-        }}
-      >
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            background: 'black',
-            animation: 'charging-progress 5s linear infinite',
-            borderRadius: '50px',
-          }}
-        />
-      </div>
-      <style>
-        {`
-          @keyframes charging-progress {
-            0% { width: 0; }
-            100% { width: 100%; }
-          }
-        `}
-      </style>
     </div>
   );
 };

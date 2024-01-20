@@ -81,7 +81,7 @@ const Hero = () => {
         <p>{HERO_TEXTS.PARAGRAPH}</p>
         <div style={{ display: "flex", alignItems: "center" }}>
           <button className="buttonClass" onClick={handleWatchButtonClick}>
-            {t(HERO_TEXTS.BUTTON_TEXT)}
+            {HERO_TEXTS.BUTTON_TEXT}
           </button>
           <div
             style={{

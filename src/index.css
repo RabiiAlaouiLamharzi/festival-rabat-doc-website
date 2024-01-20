@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=PT+Serif:ital,wght@1,700&family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -22,12 +23,14 @@ body {
 }
 
 .navbar-black {
+  overflow-x: visible !important;
   background-color: #000;
   transition: background-color 0.3s ease;
 }
 
 /* #Navigation */
 .cd-header {
+  overflow-x: visible !important;
   position: fixed;
   width: 100%;
   top: 0;
@@ -36,12 +39,14 @@ body {
 }
 
 .header-wrapper {
+  overflow-x: visible !important;
   position: relative;
   width: calc(100% - 65px);
   margin-left: 35px;
 }
 
 .logo-wrap {
+  overflow-x: visible !important;
   position: absolute;
   display: block;
   left: 0;
@@ -50,6 +55,7 @@ body {
 }
 
 .logo-wrap img {
+  overflow-x: visible !important;
   width: 15vh; /* Use vw instead of vh for responsiveness */
   padding-top: 7.5%;
   height: auto;
@@ -57,6 +63,7 @@ body {
 }
 
 .logo-wrap a {
+  overflow-x: visible !important;
   cursor: pointer;
   font-family: "DM Sans", sans-serif !important;
   font-weight: 900 !important;
@@ -69,13 +76,16 @@ body {
 }
 
 .logo-wrap a span {
+  overflow-x: visible !important;
   color: #8167a9;
 }
 
 .logo-wrap a:hover {
+  overflow-x: visible !important;
   opacity: 0.9;
 }
 .buttons-grid {
+  overflow-x: visible !important;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
@@ -94,10 +104,12 @@ body {
 }
 
 .menu-icon {
+  overflow-x: visible !important;
   cursor: pointer;
 }
 
 .nav-but-wrap {
+  overflow-x: visible !important;
   position: relative;
   display: inline-block;
   float: right;
@@ -109,6 +121,7 @@ body {
 }
 
 .menu-icon {
+  overflow-x: visible !important;
   height: 20px;
   width: 30px;
   position: relative;
@@ -119,6 +132,7 @@ body {
 }
 
 .menu-icon__line {
+  overflow-x: visible !important;
   height: 3px;
   width: 30px;
   display: block;
@@ -129,11 +143,13 @@ body {
 }
 
 .menu-icon__line-left {
+  overflow-x: visible !important;
   width: 16.5px;
   transition: all 200ms linear;
 }
 
 .menu-icon__line-right {
+  overflow-x: visible !important;
   width: 16.5px;
   float: right;
   transition: all 200ms linear;
@@ -141,6 +157,7 @@ body {
 
 .menu-icon:hover .menu-icon__line-left,
 .menu-icon:hover .menu-icon__line-right {
+  overflow-x: visible !important;
   width: 30px;
 }
 
@@ -163,12 +180,14 @@ body {
 }
 
 .nav {
+  overflow-x: visible !important;
   position: fixed;
   z-index: 98;
 }
 
 .nav:before,
 .nav:after {
+  overflow-x: visible !important;
   content: "";
   position: fixed;
   width: 100vw;
@@ -182,15 +201,18 @@ body {
 }
 
 .nav:after {
+  overflow-x: visible !important;
   background: rgb(0, 0, 0);
   transition-delay: 0s;
 }
 
 .nav:before {
+  overflow-x: visible !important;
   transition-delay: 0.2s;
 }
 
 .nav__content {
+  overflow-x: visible !important;
   position: fixed;
   visibility: hidden;
   top: 50%;
@@ -201,6 +223,7 @@ body {
 }
 
 .nav__list {
+  overflow-x: visible !important;
   position: relative;
   padding: 0;
   margin: 0;
@@ -208,6 +231,7 @@ body {
 }
 
 .nav__list-item {
+  overflow-x: visible !important;
   position: relative;
   display: block;
   transition: opacity 0.2s ease, transform 0.3s ease;
@@ -215,7 +239,7 @@ body {
   text-align: center;
   color: #fff;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Trocchi", serif !important;
   font-size: 8vh;
   font-weight: 900;
   line-height: 1.15;
@@ -226,6 +250,7 @@ body {
 }
 
 .nav__list-item a {
+  overflow-x: visible !important;
   position: relative;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
@@ -240,6 +265,7 @@ body {
 }
 
 .nav__list-item a:after {
+  overflow-x: visible !important;
   position: absolute;
   content: "";
   top: 50%;
@@ -254,6 +280,7 @@ body {
 }
 
 .nav__list-item a:hover:after {
+  overflow-x: visible !important;
   height: 4px;
   opacity: 1;
   left: 0;
@@ -261,28 +288,34 @@ body {
 }
 
 .nav__list-item a:hover {
+  overflow-x: visible !important;
   color: rgba(255, 255, 255, 1);
 }
 
 .nav__list-item.active-nav a {
+  overflow-x: visible !important;
   color: rgba(255, 255, 255, 1);
 }
 
 body.nav-active .nav__content {
+  overflow-x: visible !important;
   visibility: visible;
 }
 
 body.nav-active .menu-icon__line {
+  overflow-x: visible !important;
   background-color: #fff;
   transform: translate(0px, 0px) rotate(-45deg);
 }
 
 body.nav-active .menu-icon__line-left {
+  overflow-x: visible !important;
   width: 15px;
   transform: translate(2px, 4px) rotate(45deg);
 }
 
 body.nav-active .menu-icon__line-right {
+  overflow-x: visible !important;
   width: 15px;
   float: right;
   transform: translate(-3px, -3.5px) rotate(45deg);
@@ -290,28 +323,34 @@ body.nav-active .menu-icon__line-right {
 
 body.nav-active .menu-icon:hover .menu-icon__line-left,
 body.nav-active .menu-icon:hover .menu-icon__line-right {
+  overflow-x: visible !important;
   width: 15px;
 }
 
 body.nav-active .nav {
+  overflow-x: visible !important;
   visibility: visible;
 }
 
 body.nav-active .nav:before,
 body.nav-active .nav:after {
+  overflow-x: visible !important;
   transform: translateX(0%) translateY(0%);
   border-radius: 0;
 }
 
 body.nav-active .nav:after {
+  overflow-x: visible !important;
   transition-delay: 0.1s;
 }
 
 body.nav-active .nav:before {
+  overflow-x: visible !important;
   transition-delay: 0s;
 }
 
 body.nav-active .nav__list-item {
+  overflow-x: visible !important;
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -362,6 +401,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap {
+  overflow-x: visible !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -374,6 +414,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap h1 {
+  overflow-x: visible !important;
   font-weight: 900;
   font-size: 46px;
   line-height: 1;
@@ -385,6 +426,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap p {
+  overflow-x: visible !important;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -395,10 +437,12 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap p span {
+  overflow-x: visible !important;
   position: relative;
 }
 
 .switch-wrap p span:before {
+  overflow-x: visible !important;
   position: absolute;
   content: "";
   width: 100%;
@@ -410,16 +454,19 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap p span:nth-child(2):before {
+  overflow-x: visible !important;
   opacity: 0;
 }
 
 #switch,
 #circle {
+  overflow-x: visible !important;
   cursor: pointer;
   transition: all 300ms linear;
 }
 
 #switch {
+  overflow-x: visible !important;
   width: 60px;
   height: 8px;
   margin: 0 auto;
@@ -432,6 +479,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 #circle {
+  overflow-x: visible !important;
   position: absolute;
   top: -11px;
   left: -13px;
@@ -448,11 +496,13 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switched #circle {
+  overflow-x: visible !important;
   left: 43px;
   background: #000;
 }
 
 .navigation-points {
+  overflow-x: visible !important;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -461,6 +511,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nav-point {
+  overflow-x: visible !important;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -471,6 +522,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .nav-point.active {
+  overflow-x: visible !important;
   background-color: #555;
 }
 
@@ -568,7 +620,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   opacity: 0.7;
   padding-bottom: 1%;
   font-size: 80px;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
   margin-right: 5%;
   line-height: 1;
   align-self: flex-end;
@@ -583,7 +635,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   transition: background 0.3s, color 0.3s;
   font-size: 40px;
   font-weight: 500;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
   align-self: flex-end;
 }
 
@@ -780,7 +832,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   padding-top: 10px;
   font-size: 27px; /* Adjust as needed */
   text-align: justify;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
   font-weight: 200;
   line-height: 1.05;
 }
@@ -921,7 +973,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   font-size: 40px;
   line-height: 1;
   padding-bottom: 2rem;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
 }
 
 .video-container {
@@ -1039,7 +1091,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   margin-bottom: 10px;
   margin-top: 10px;
   line-height: 1.1;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
 }
 
 .small-title {
@@ -1320,10 +1372,13 @@ body.nav-active .nav__list-item:nth-child(10) {
   background-color: rgb(0, 0, 0);
 }
 
-.original-button {
+.original-button:nth-child(1),
+.original-button:nth-child(2),
+.original-button:nth-child(4),
+.original-button:nth-child(5) {
   overflow-y: hidden !important;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
   width: auto;
   background: transparent;
   border: 2px solid goldenrod;
@@ -1331,17 +1386,35 @@ body.nav-active .nav__list-item:nth-child(10) {
   border-radius: 100px; /* Added border radius */
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  font-size: 20px;
+  font-size: 20px !important;
   font-weight: 500;
-  font-family: "PT Serif", serif;
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.original-button:nth-child(3) {
+  overflow-y: hidden !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  width: auto;
+  border: 2px solid white;
+  background: white;
+  border-radius: 100px; /* Added border radius */
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 20px !important;
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
   line-height: 1;
 }
 
 .original-button:hover {
   overflow-y: hidden !important;
-  color: rgb(0, 0, 0);
-  border: 2px solid goldenrod;
-  background: goldenrod;
+  color: white;
+  border: 2px solid white;
+  background: transparent;
 }
 
 .original-black-screen {
@@ -1359,6 +1432,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   z-index: 1000; /* Make sure it's above other content */
   transition: height 0.3s; /* Add transition property for height */
 }
+
 
 .original-white-text {
   overflow-y: hidden !important;
@@ -1502,7 +1576,7 @@ a:hover {
   font-weight: 700;
   color: #ffffff;
   font-size: 40px;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
 }
 
 .section-news .single-news {
@@ -1538,7 +1612,7 @@ a:hover {
   margin-bottom: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
   font-size: 25px;
   line-height: 1.1;
 }
@@ -1547,7 +1621,7 @@ a:hover {
   overflow-x: visible !important;
   text-decoration: none;
   color: goldenrod;
-  font-family: "PT Serif", serif;
+  font-family: "Trocchi", serif;
 }
 
 .section-news .single-news .title a:hover {
@@ -1602,7 +1676,7 @@ a:hover {
   color: white; /* Set the arrow color to white */
   background-color: transparent; /* Set the background color to transparent */
   margin-top: 40px;
-  z-index: 100;
+  z-index: 97;
   padding-left: 10px;
   padding-right: 10px;
   border: 2px solid white; /* Add white border */
@@ -2058,4 +2132,185 @@ ion-icon {
   color: black !important;
   background-color: goldenrod !important;
   border-radius: 0 !important;
+}
+
+.slider {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+}
+
+.slider input[type="radio"] {
+  position: relative;
+  margin: 0 1rem 1rem 0;
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+.slider input[type="radio"]:checked + .slider__content {
+  transition-delay: 0.5s;
+  background-color: black;
+  clip-path: circle(100vw at center);
+}
+
+.slider__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  clip-path: circle(0px at center);
+}
+
+.slider__content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__content .slider__description {
+  position: relative;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  max-width: 1000px;
+}
+
+.slider__content .slider__description h1 {
+  font-size: 5rem;
+}
+
+.slider__content .slider__description p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.slider__content .slider__description a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.slider__content .slider__description a:hover {
+  opacity: 0.5;
+}
+
+.transparent-background {
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity here */
+  overflow-y: hidden !important;
+}
+
+.transparent-background-overlay {
+  overflow-y: hidden !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: 2;
+}
+
+.transparent-background-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.transparent-background-overlay img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px; /* Adjust margin as needed */
+}
+
+.slide img {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  object-fit: contain;
+}
+
+.slide {
+  white-space: nowrap;
+  width: 1354px;
+  height: 727px;
+  overflow: hidden;
+  position: relative;
+}
+
+.center {
+  margin: auto;
+}
+
+@media (max-width: 1500px) {
+  .slide {
+    width: 1000px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slide {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slide {
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+.left {
+  left: 50px;
+}
+
+.right {
+  right: 50px;
 }
