@@ -11,6 +11,7 @@ const Intro = () => {
       <div className="image-container">
         <LazyLoad>
         <img className="imageTitle" src={Logo} alt="Intro Image" />
+        
         </LazyLoad>
       </div>
       <p className="white-paragraph">{INTRO_TEXTS.PARAGRAPH}</p>

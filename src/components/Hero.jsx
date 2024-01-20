@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import image1 from "../assets/hero1.jpg";
-import image2 from "../assets/hero2.jpg";
+import image1 from "../assets/hero1.webp";
+import image2 from "../assets/hero2.webp";
 import { HERO_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
 import LazyLoad from 'react-lazyload';
 
 const Hero = () => {
-  const { t } = useTranslation();
   const [showImage1, setShowImage1] = useState(true);
   const [barWidth, setBarWidth] = useState(0);
   const intervalRef = useRef();

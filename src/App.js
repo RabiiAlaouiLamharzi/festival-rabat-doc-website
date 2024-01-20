@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Preloader from "./components/Preloader";
@@ -17,9 +17,24 @@ const LazyFooter = lazy(() => import("./components/Footer"));
 const LazyDeco = lazy(() => import("./components/Decorative"));
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Hide preloader after 8 seconds
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+
+    return () => {
+      // Clear the timeout on component unmount
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-white">
+        {loading && <Preloader />} {/* Display preloader while loading */}
         <div id="navbar">
           <Navbar />
         </div>
@@ -33,6 +48,11 @@ const App = () => {
             <LazyBar />
           </Suspense>
         </div>
+        <div id="intro">
+          <Suspense fallback={<Preloader />}>
+            <LazyIntro />
+          </Suspense>
+        </div>
         <div
           style={{
             height: "5px",
@@ -40,11 +60,6 @@ const App = () => {
             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
           }}
         ></div>
-        <div id="intro">
-          <Suspense fallback={<Preloader />}>
-            <LazyIntro />
-          </Suspense>
-        </div>
         <div
           style={{
             height: "5px",

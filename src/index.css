@@ -814,12 +814,12 @@ body.nav-active .nav__list-item:nth-child(10) {
 
 .imageTitle {
   width: 147px;
-  margin-top: 2%;
+  margin-top: 1.5%;
   opacity: 0.7;
   filter: brightness(0) invert(100%);
   position: absolute;
   top: -20px;
-  left: 8vw;
+  left: 9vw;
   transform: translateX(-50%);
 }
 
