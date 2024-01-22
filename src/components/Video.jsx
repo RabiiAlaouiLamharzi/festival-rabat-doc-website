@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import VideoDoc from "../assets/rabatDoc.mp4";
+import VideoDoc from "../assets/rabatDocFestival.mp4";
 import muteImage from "../assets/mute.png";
 import unmuteImage from "../assets/unmute.png";
 import resumeImage from "../assets/resume.png";
@@ -110,7 +110,7 @@ const Video = () => {
             paddingLeft: "15px",
             paddingBottom: "10px",
             marginLeft: 0,
-            marginRight: 0,
+            marginRight: 1,
             marginBottom: 0,
             border: 0,
             boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",

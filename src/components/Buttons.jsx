@@ -39,6 +39,13 @@ import image33 from "../assets/pressbook-78.jpg";
 import image34 from "../assets/pressbook-79.jpg";
 import image35 from "../assets/pressbook-80.jpg";
 import image36 from "../assets/pressbook-81.jpg";
+import im1 from "../assets/im1.png";
+import im2 from "../assets/im2.png";
+import im3 from "../assets/im3.png";
+import im4 from "../assets/im4.png";
+import im5 from "../assets/im5.png";
+import im6 from "../assets/im6.png";
+import im7 from "../assets/im7.png";
 
 const images = [
   image1, image2, image3, image4, image5, image6, image7, image8, image9,
@@ -74,6 +81,78 @@ const OriginalButtons = () => {
     );
   };
 
+  const renderButtonContent = () => {
+    if (selectedButtonIndex !== null) {
+      const button = buttonContent[selectedButtonIndex];
+  
+      const commonImageStyle = {
+        width: "45%", // Adjust the width as needed
+        height: "25vw", // Adjust the height as needed (using viewport width unit)
+        objectFit: "cover", // Maintain aspect ratio and cover the container
+        display: "block",
+
+      };
+      const commonImageStyle2 = {
+        width: "45%", // Adjust the width as needed
+        height: "20vw", // Adjust the height as needed (using viewport width unit)
+        objectFit: "cover", // Maintain aspect ratio and cover the container
+        display: "block",
+
+      };
+  
+      switch (selectedButtonIndex) {
+        case 0:
+          return (
+            <>
+              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+              <div className="original-title">{button.title}</div>
+              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+              <img src={im1} style={commonImageStyle} alt="Image 1" />
+            </>
+          );
+        case 1:
+          return (
+            <>
+              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+              <div className="original-title">{button.title}</div>
+              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+              <img src={im7} style={commonImageStyle} alt="Image 7" />
+            </>
+          );
+        case 3:
+          return (
+            <>
+              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+              <div className="original-title">{button.title}</div>
+              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <img src={im2} style={commonImageStyle2} alt="Image 2" />
+                <img src={im3} style={commonImageStyle2} alt="Image 3" />
+                <img src={im4} style={commonImageStyle2} alt="Image 4" />
+              </div>
+            </>
+          );
+        case 4:
+          return (
+            <>
+              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+              <div className="original-title">{button.title}</div>
+              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+              <img src={im6} style={commonImageStyle} alt="Image 6" />
+            </>
+          );
+        default:
+          return (
+            <>
+              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+              <div className="original-title">{button.title}</div>
+              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+            </>
+          );
+      }
+    }
+  };  
+
   return (
     <>
       <div className="original-buttons-container" style={{ overflowY: "hidden" }}>
@@ -105,11 +184,7 @@ const OriginalButtons = () => {
         onClick={handleOverlayClick}
       >
         {selectedButtonIndex !== null && selectedButtonIndex !== 2 && (
-          <div className="original-overlay">
-            <div className="original-text red">→</div>
-            <div className="original-title">{buttonContent[selectedButtonIndex].title}</div>
-            <div className="original-text">{buttonContent[selectedButtonIndex].text}</div>
-          </div>
+          <div className="original-overlay">{renderButtonContent()}</div>
         )}
 
         {selectedButtonIndex === 2 && (

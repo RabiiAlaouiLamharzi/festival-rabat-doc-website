@@ -8,17 +8,56 @@ const Navbar = () => {
   const { t } = useTranslation();
   const [language, setLanguage] = useState("EN");
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [timerId, setTimerId] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
+
+      // Check if the scroll position is within the "video" section
+      const videoSection = document.getElementById("video");
+      if (videoSection) {
+        const sectionTop = videoSection.offsetTop;
+        const sectionHeight = videoSection.offsetHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+          // Clear the existing timer
+          if (timerId) {
+            clearTimeout(timerId);
+          }
+
+          // Set a new timer to remove effects after a delay
+          const newTimerId = setTimeout(() => {
+            const header = document.querySelector(".cd-header");
+            if (header) {
+              header.style.backgroundColor = "rgba(0, 0, 0, 0)";
+              header.style.backdropFilter = "blur(0)";
+            }
+          }, 500); // Adjust the delay as needed (in milliseconds)
+
+          setTimerId(newTimerId);
+
+          // Apply the effects while scrolling within the "video" section
+          const header = document.querySelector(".cd-header");
+          if (header) {
+            header.style.backgroundColor = `rgba(0, 0, 0, ${scrollPosition > 50 ? 0.7 : 0})`;
+            header.style.backdropFilter = `blur(${scrollPosition > 50 ? "10px" : "0"})`;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      // Clear the timer when the component is unmounted
+      if (timerId) {
+        clearTimeout(timerId);
+      }
     };
-  }, []);
+  }, [scrollPosition, timerId]);
 
   const logoStyle = {
     transition: "transform 0.3s ease-in-out",
@@ -93,7 +132,7 @@ const Navbar = () => {
               {/* Language button 
               <button className="language-button" onClick={toggleLanguage}>
                 {language}
-              </button>  */}
+              </button>
               {/* Hamburger menu */}
               <div className="menu-icon hover-target" onClick={toggleClass}>
                 <span className="menu-icon__line menu-icon__line-left"></span>

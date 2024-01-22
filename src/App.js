@@ -15,6 +15,7 @@ const LazyButtons = lazy(() => import("./components/Buttons"));
 const LazyArticles = lazy(() => import("./components/Articles"));
 const LazyFooter = lazy(() => import("./components/Footer"));
 const LazyDeco = lazy(() => import("./components/Decorative"));
+const LazyNews = lazy(() => import("./components/Newsletter"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -117,6 +118,11 @@ const App = () => {
           </Suspense>
         </div>
         <center></center>
+        <div id="News">
+          <Suspense fallback={<Preloader />}>
+            <LazyNews />
+          </Suspense>
+        </div>
         <div id="footer">
           <Suspense fallback={<Preloader />}>
             <LazyFooter />

@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import image1 from "../assets/hero1.webp";
 import image2 from "../assets/hero2.webp";
 import { HERO_TEXTS } from "../constants/index.js";
-import { useTranslation } from "react-i18next";
 import LazyLoad from 'react-lazyload';
 
 const Hero = () => {
@@ -45,21 +44,39 @@ const Hero = () => {
       });
     }, 70);
   };
-
   const handleWatchButtonClick = () => {
-    document.getElementById("video").scrollIntoView({ behavior: "smooth" });
-  };
+    const legalSection = document.getElementById("legal-section");
+  
+    const highlightDuration = 150; // Duration of each highlight in milliseconds
+    const totalHighlights = 4; // Number of times to highlight
+  
+    // Function to add and remove the highlight class with a delay
+    const toggleHighlight = () => {
+      legalSection.classList.add("highlighted-section");
+      setTimeout(() => {
+        legalSection.classList.remove("highlighted-section");
+      }, highlightDuration);
+    };
+  
+    // Trigger multiple highlights with delays
+    for (let i = 0; i < totalHighlights; i++) {
+      setTimeout(toggleHighlight, i * (highlightDuration * 2)); // Adjust the multiplier as needed for spacing
+    }
+  
+    // Scroll to the legal section
+    legalSection.scrollIntoView({ behavior: "smooth" });
+  };  
 
   return (
     <div
-    className="hero-container"
-    style={{
-      position: "relative",
-      overflow: "hidden",
-      height: "auto",
-      minHeight: "720px", // Set a minimum height for visibility
-    }}
-  >
+      className="hero-container"
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        height: "auto",
+        minHeight: "720px", // Set a minimum height for visibility
+      }}
+    >
       <div
         className="progress-bar"
         style={{
@@ -108,20 +125,16 @@ const Hero = () => {
       </div>
 
       <div className="image-container">
-        <LazyLoad>
-        <img
-          className={`fade-image ${showImage1 ? "visible" : ""}`}
-          src={image1}
-          alt="rfced"
-        />
-        </LazyLoad>
-        <LazyLoad>
-        <img
-          className={`fade-image ${!showImage1 ? "visible" : ""}`}
-          src={image2}
-          alt="rfced"
-        />
-        </LazyLoad>
+          <img
+            className={`fade-image ${showImage1 ? "visible" : ""}`}
+            src={image1}
+            alt="rfced"
+          />
+          <img
+            className={`fade-image ${!showImage1 ? "visible" : ""}`}
+            src={image2}
+            alt="rfced"
+          />
       </div>
     </div>
   );

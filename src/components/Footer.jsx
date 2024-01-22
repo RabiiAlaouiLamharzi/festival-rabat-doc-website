@@ -83,7 +83,7 @@ const Footer = () => {
           </ul>
         </section>
 
-        <section className="footer-item">
+        <section className="footer-item legal" id="legal-section">
           <h3>{FOOTER_TEXTS.LEGAL_TITLE}</h3>
           <ul>
             {FOOTER_TEXTS.LEGAL_LINKS.map((link, index) => (
@@ -96,7 +96,7 @@ const Footer = () => {
 
         <section className="footer-item">
           <a
-            href="https://drive.google.com/drive/folders/1j9WqlZbUuIg8ZjVfJkKaz1YFozTGYhax?usp=sharing"
+            href="https://drive.google.com/file/d/1lLgB37G0tj2tfOXVIhV8ChnNRULtUVpU/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-button"
