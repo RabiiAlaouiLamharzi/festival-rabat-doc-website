@@ -2425,7 +2425,7 @@ form {
 }
 
 .highlighted-section {
-  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   transition: opacity 1s ease-in-out; 
   padding: 2px;
 }
