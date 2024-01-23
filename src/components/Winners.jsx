@@ -6,6 +6,8 @@ import image4 from "../assets/win4.jpg";
 import image5 from "../assets/win5.jpg";
 import placeholderImage from "../assets/placeholder.png";
 import { WINNERS_TEXTS } from "../constants/index.js";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Winners = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -44,6 +46,7 @@ const Winners = () => {
     <div className="noise winners-container">
       <div className="grid-container">
         <div className="left-column">
+        <ScrollAnimation animateIn="fadeIn" animateOnce>
           <img
             src={placeholderImage}
             alt="Placeholder"
@@ -53,8 +56,10 @@ const Winners = () => {
           <h2 className="small-title">{WINNERS_TEXTS.DESCRIPTION}</h2>
           <br />
           <h2 className="small-title2">{WINNERS_TEXTS.DETAILS}</h2>
+        </ScrollAnimation>
         </div>
         <div className="right-column">
+          <ScrollAnimation animateIn="fadeIn" animateOnce>
           <div className="image-slider">
             <img
               src={images[currentImage]}
@@ -74,6 +79,7 @@ const Winners = () => {
               />
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </div>
     </div>

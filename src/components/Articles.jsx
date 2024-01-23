@@ -7,6 +7,8 @@ import ArticleDetail from "../pages/ArticleDetail";
 import { ARTICLES_TEXT } from "../constants/index.js";
 import image from "../assets/articles_image.jpg";
 import closeImage from '../assets/close.png';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Articles = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -81,12 +83,15 @@ const Articles = () => {
   return (
     <section className="section-news">
       <div className="header-section">
+        <ScrollAnimation animateIn="fadeIn" animateOnce>
         <h3 className="small-title">
           <span></span>
           {ARTICLES_TEXT.RECENT_NEWS_TITLE}
         </h3>
         <h2 className="title">{ARTICLES_TEXT.NEWS_ARTICLES_TITLE}</h2>
+        </ScrollAnimation>
       </div>
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
       <div className="container">
         <Slider {...settings}>
         {fetchedArticles.map((article) => (
@@ -174,6 +179,7 @@ const Articles = () => {
           {selectedArticle && <ArticleDetail article={selectedArticle} />}
         </Modal>
       </div>
+      </ScrollAnimation>
     </section>
   );
 };

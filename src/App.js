@@ -40,17 +40,17 @@ const App = () => {
           <Navbar />
         </div>
         <div id="hero">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyHero />
           </Suspense>
         </div>
         <div id="bar">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyBar />
           </Suspense>
         </div>
         <div id="intro">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyIntro />
           </Suspense>
         </div>
@@ -69,7 +69,7 @@ const App = () => {
           }}
         ></div>
         <div id="details">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyDetails />
           </Suspense>
         </div>
@@ -81,7 +81,7 @@ const App = () => {
           }}
         ></div>
         <div id="video">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyVideo />
           </Suspense>
         </div>
@@ -93,38 +93,38 @@ const App = () => {
           }}
         ></div>
         <div id="winners">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyWinners />
           </Suspense>
         </div>
         <div id="sponsors">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazySponsors />
           </Suspense>
         </div>
         <div id="buttons">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyButtons />
           </Suspense>
         </div>
         <div id="articles">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyArticles />
           </Suspense>
         </div>
         <div id="decorative">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyDeco />
           </Suspense>
         </div>
         <center></center>
         <div id="News">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyNews />
           </Suspense>
         </div>
         <div id="footer">
-          <Suspense fallback={<Preloader />}>
+          <Suspense>
             <LazyFooter />
           </Suspense>
         </div>

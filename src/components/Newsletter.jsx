@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
@@ -68,6 +70,7 @@ const Newsletter = () => {
 
   return (
     <div className="newsletter-container">
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
       <form className="newsletter-form" onSubmit={handleSubmit}>
         <input
           type="email"
@@ -78,6 +81,7 @@ const Newsletter = () => {
         />
         <button type="submit">S'abonner</button>
       </form>
+      </ScrollAnimation>
     </div>
   );
 };

@@ -3,6 +3,8 @@ import image1 from "../assets/si1.jpeg";
 import image2 from "../assets/si2.jpg";
 import { DETAILS_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Details = () => {
   const { t } = useTranslation();
@@ -15,10 +17,13 @@ const Details = () => {
           </div>
         </div>
         <div className="grid-item">
+          <ScrollAnimation animateIn="fadeIn" animateOnce>
           <div className="nested-grid-item-p">
-            <h1 className="titleSijlmassa">{DETAILS_TEXTS.IDENTITY_TITLE}</h1>
-            <p className="Sijlmassa">{DETAILS_TEXTS.IDENTITY_CONTENT}</p>
+              <h1 className="titleSijlmassa">{DETAILS_TEXTS.IDENTITY_TITLE}</h1>
+              <p className="Sijlmassa">{DETAILS_TEXTS.IDENTITY_CONTENT}</p>
           </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeIn" animateOnce>
           <div className="nested-grid-container2">
             <div className="nested-grid-item">
               <img
@@ -28,10 +33,10 @@ const Details = () => {
               />
             </div>
             <div className="nested-grid-item2">
-              <h1 className="titleSijlmassa" style={{ color: "goldenrod" }}>
-                {DETAILS_TEXTS.VALUE_ADDED_TITLE}
-              </h1>
-              <p className="Sijlmassa">{DETAILS_TEXTS.VALUE_ADDED_CONTENT}</p>
+                <h1 className="titleSijlmassa" style={{ color: "goldenrod" }}>
+                  {DETAILS_TEXTS.VALUE_ADDED_TITLE}
+                </h1>
+                <p className="Sijlmassa">{DETAILS_TEXTS.VALUE_ADDED_CONTENT}</p>
             </div>
             <div className="nested-grid-item">
               <img
@@ -41,6 +46,7 @@ const Details = () => {
               />
             </div>
           </div>
+          </ScrollAnimation>
         </div>
         <div className="grid-item">
           <div className="centered-content2">

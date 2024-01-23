@@ -2,6 +2,8 @@ import React from "react";
 import Logo from "../assets/festi-logo-again.png";
 import { FOOTER_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Footer = () => {
   const { t } = useTranslation();

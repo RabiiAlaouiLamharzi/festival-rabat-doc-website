@@ -10,8 +10,37 @@ const Preloader = () => {
 
     return () => clearTimeout(timeout);
   }, []);
+
+  useEffect(() => {
+    // Apply overflow: hidden to the body when the preloader is visible
+    if (!fadeOut) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Remove overflow: hidden when the preloader disappears
+      document.body.style.overflow = 'visible';
+    }
+  }, [fadeOut]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', background: '#fff', color: 'rgba(255, 255, 255, 0.95)' }}>
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#fff',
+        color: 'rgba(255, 255, 255, 0.95)',
+        overflow: 'hidden', // Ensure no scrolling
+        zIndex: 1000,
+        opacity: fadeOut ? 0 : 1, // Apply opacity when fading out
+        transition: 'opacity 1s ease-in-out', // Smooth transition
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org"

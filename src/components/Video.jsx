@@ -5,6 +5,8 @@ import unmuteImage from "../assets/unmute.png";
 import resumeImage from "../assets/resume.png";
 import stopImage from "../assets/stop.png";
 import { VIDEO_PLAYER } from "../constants/index.js";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Video = () => {
   const [videoStarted, setVideoStarted] = useState(false);
@@ -97,6 +99,7 @@ const Video = () => {
   return (
     <div className="video-container">
       <div className="video-overlay"></div>
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
       <div className="video-controls">
         <button
           className="stop-button"
@@ -150,6 +153,7 @@ const Video = () => {
         <source src={VideoDoc} type="video/mp4" />
         {VIDEO_PLAYER.WARNING}
       </video>
+      </ScrollAnimation>
     </div>
   );
 };
