@@ -37,7 +37,7 @@ const Footer = () => {
         <section className="footer-item">
           <h3>{FOOTER_TEXTS.VISIT_TITLE}</h3>
           <a
-            href="https://saissmedit.ma/contact-us/?lang=en"
+            href={`https://www.google.com/maps/place/imm.+2+n%C2%B08,+2+Rue+Bait+Lahm,+Rabat`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -49,7 +49,7 @@ const Footer = () => {
           <h3 className="desktop">{FOOTER_TEXTS.CONTACT_TITLE}</h3>
           <p className="desktop">
             <a
-              href="https://saissmedit.ma/contact-us/?lang=en"
+              href={`mailto:${FOOTER_TEXTS.CONTACT_EMAIL}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -58,8 +58,7 @@ const Footer = () => {
           </p>
           <p className="desktop">
             <a
-              href="https://saissmedit.ma/contact-us/?lang=en"
-              target="_blank"
+              href="#footer"
               rel="noopener noreferrer"
             >
               {FOOTER_TEXTS.CONTACT_PHONE}
