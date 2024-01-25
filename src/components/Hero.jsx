@@ -92,7 +92,8 @@ const Hero = () => {
       />
 
       <div className="text-container">
-        <h2>{HERO_TEXTS.TITLE}</h2>
+        <h2>{HERO_TEXTS.TITLE1}</h2>
+        <h2>{HERO_TEXTS.TITLE2}</h2>
         <p>{HERO_TEXTS.PARAGRAPH}</p>
         <div style={{ display: "flex", alignItems: "center" }}>
           <button className="buttonClass" onClick={handleWatchButtonClick}>

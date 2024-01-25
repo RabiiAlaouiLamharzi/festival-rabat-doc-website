@@ -75,7 +75,8 @@ export const BAR_TEXT =
   };
   
   export const HERO_TEXTS = {
-    TITLE: "Festival international Rabat'Doc Africa",
+    TITLE1: "Festival international",
+    TITLE2: "Rabat'Doc Africa",
     PARAGRAPH:
       "Le Festival International Rabat’Doc Africa est un événement mondial consacré au cinéma documentaire africain. Il est mis en place par le Centre Sijilmassa pour les études et les recherches audiovisuelles (CSERA), une entité académique indépendante focalisée sur la culture audiovisuelle affiliée à l'Université Mohammed V.",
     BUTTON_TEXT: "Formulaire d'Inscription",
