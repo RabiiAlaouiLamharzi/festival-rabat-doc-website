@@ -24,7 +24,7 @@ export const BAR_TEXT =
       text: "En plus de la compétition officielle, Rabat'Doc a présenté au grand public et aux cinéphiles une sélection de films documentaires sur le continent africain. La section Panorama a introduit le vrai cinéma à un large public dans ses dimensions esthétiques et thématiques.",
     },
     {
-      title: "ARCHIVES 2023",
+      title: "Zone de Presse",
     },
     {
       title: "Ateliers",
@@ -49,12 +49,9 @@ export const BAR_TEXT =
     MAKE_PASSION_1: "Nous Créons, Avec Passion et",
     MAKE_PASSION_2: "Professionnalisme,",
     MAKE_PASSION_3: "Toutes Sortes de Productions.",
-    EXPLORE_TITLE: "Explorer",
+    EXPLORE_TITLE: "Éditions Précédentes",
     EXPLORE_LINKS: [
-      { label: "ACCUEIL", href: "#hero" },
-      { label: "CSERA", href: "#details" },
-      { label: "COMPÉTITION", href: "#winners" },
-      { label: "ACTUALITÉS", href: "#articles" },
+      { label: "ÉDITION 2023", href: "https://drive.google.com/file/d/1lLgB37G0tj2tfOXVIhV8ChnNRULtUVpU/view?usp=sharing", target: "_blank", rel: "noopener noreferrer" },
     ],
     VISIT_TITLE: "Visiter",
     VISIT_ADDRESS: ["2, Rue de Bethléem,", "Bât. 2 N° 8", "Rabat - Maroc"],
@@ -71,10 +68,10 @@ export const BAR_TEXT =
     ],
     LEGAL_TITLE: "Mentions Légales",
     LEGAL_LINKS: [
-      { label: "Règlement Festival", href: "#" },
-      { label: "Formulaire d'Inscription", href: "#" },
+      { label: "Règlement Festival", href: "https://drive.google.com/file/d/1Q1tnzp46jENoX5llpFWNgKBZH0pk3JLC/view?usp=sharing" },
+      { label: "Formulaire d'Inscription", href: "https://drive.google.com/file/d/1Q1tnzp46jENoX5llpFWNgKBZH0pk3JLC/view?usp=sharing" },
     ],
-    VIEW_PRESSBOOK: "Voir Pressbook",
+    ADMIN: "PAGE D'ADMIN",
   };
   
   export const HERO_TEXTS = {

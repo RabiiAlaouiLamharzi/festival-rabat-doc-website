@@ -28,7 +28,13 @@ const Footer = () => {
           <ul>
             {FOOTER_TEXTS.EXPLORE_LINKS.map((link, index) => (
               <li key={index}>
-                <a href={link.href}>{link.label}</a>
+                <a
+                  href={link.href}
+                  target={link.label === "ÉDITION 2023" ? "_blank" : undefined}
+                  rel={link.label === "ÉDITION 2023" ? "noopener noreferrer" : undefined}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -89,20 +95,26 @@ const Footer = () => {
           <ul>
             {FOOTER_TEXTS.LEGAL_LINKS.map((link, index) => (
               <li key={index}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+                  <a
+                    href={link.href}
+                    target={link.label === "Règlement Festival" || "Formulaire d'Inscription" ? "_blank" : undefined}
+                    rel={link.label === "Règlement Festival" || "Formulaire d'Inscription" ? "noopener noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
           </ul>
         </section>
 
         <section className="footer-item">
           <a
-            href="https://drive.google.com/file/d/1lLgB37G0tj2tfOXVIhV8ChnNRULtUVpU/view?usp=sharing"
+            href="https://main.dash-aloui.net/login"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-button"
           >
-            {FOOTER_TEXTS.VIEW_PRESSBOOK}
+            {FOOTER_TEXTS.ADMIN}
           </a>
         </section>
       </nav>

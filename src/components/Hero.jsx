@@ -47,7 +47,7 @@ const Hero = () => {
     const legalSection = document.getElementById("legal-section");
   
     const highlightDuration = 150; // Duration of each highlight in milliseconds
-    const totalHighlights = 4; // Number of times to highlight
+    const totalHighlights = 5; // Number of times to highlight
   
     // Function to add and remove the highlight class with a delay
     const toggleHighlight = () => {

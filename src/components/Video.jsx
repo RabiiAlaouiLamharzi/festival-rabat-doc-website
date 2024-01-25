@@ -13,6 +13,7 @@ const Video = () => {
   const [stopRequested, setStopRequested] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [stopIcon, setStopIcon] = useState(stopImage);
+  const isChrome = navigator.userAgent.indexOf("Chrome") !== -1;
 
   useEffect(() => {
     const video = document.querySelector(".video-player");
