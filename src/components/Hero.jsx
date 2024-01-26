@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import image1 from "../assets/hero1.JPG";
-import image2 from "../assets/hero2.jpg";
-import image3 from "../assets/hero3.JPG";
-import image4 from "../assets/hero4.jpg";
+import image1 from "../assets/hero1.png";
+import image2 from "../assets/hero2.png";
+import image3 from "../assets/hero3.png";
+import image4 from "../assets/hero4.png";
 import { HERO_TEXTS } from "../constants/index.js";
 
 const Hero = () => {
