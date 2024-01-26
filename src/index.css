@@ -542,7 +542,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 3s ease-in-out, background-color 3s ease-in-out; /* Adjust the transition duration as needed */
+  transition: opacity 1.5s ease-in-out, background-color 3s ease-in-out; /* Adjust the transition duration as needed */
   background-color: rgba(
     0,
     0,
@@ -557,7 +557,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     0,
     0,
     0,
-    0.5
+    0.6
   ); /* Change the background color to fully transparent */
 }
 
@@ -2444,3 +2444,29 @@ form {
 .drop {
   animation: drop 5s ease-out; /* Adjust the duration and timing function as needed */
 }
+
+.video-container {
+  position: relative;
+}
+
+.control-buttons {
+  position: absolute;
+  top: 10px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.control-button {
+  width: 65px; /* Adjust as needed for your preferred size */
+  height: 65px; /* Adjust as needed for your preferred size */
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add any additional styling as needed */

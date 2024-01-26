@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
 import ArticleDetail from "../pages/ArticleDetail";
 import { ARTICLES_TEXT } from "../constants/index.js";
-import image from "../assets/articles_image.jpg";
+import image from "../assets/ARTI_IMAGE.png";
 import closeImage from '../assets/close.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";

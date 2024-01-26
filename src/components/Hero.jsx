@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import image1 from "../assets/hero1.webp";
-import image2 from "../assets/hero2.webp";
+import image1 from "../assets/hero1.JPG";
+import image2 from "../assets/hero2.jpg";
+import image3 from "../assets/hero3.JPG";
+import image4 from "../assets/hero4.jpg";
 import { HERO_TEXTS } from "../constants/index.js";
 
 const Hero = () => {
-  const [showImage1, setShowImage1] = useState(true);
+  const [visibleImageIndex, setVisibleImageIndex] = useState(0);
   const [barWidth, setBarWidth] = useState(0);
   const intervalRef = useRef();
 
@@ -13,7 +15,7 @@ const Hero = () => {
       setBarWidth((prev) => {
         const newWidth = prev + 1;
         if (newWidth >= 100) {
-          setShowImage1((prev) => !prev);
+          setVisibleImageIndex((prevIndex) => (prevIndex + 1) % 4);
           return 0;
         } else {
           return newWidth;
@@ -29,13 +31,15 @@ const Hero = () => {
   const handleImageChange = (direction) => {
     clearInterval(intervalRef.current);
     setBarWidth(0);
-    setShowImage1((prev) => !prev);
+    setVisibleImageIndex((prevIndex) =>
+      direction === "left" ? (prevIndex + 3) % 4 : (prevIndex + 1) % 4
+    );
 
     intervalRef.current = setInterval(() => {
       setBarWidth((prev) => {
         const newWidth = prev + 1;
         if (newWidth >= 100) {
-          setShowImage1((prev) => !prev);
+          setVisibleImageIndex((prevIndex) => (prevIndex + 1) % 4);
           return 0;
         } else {
           return newWidth;
@@ -125,16 +129,26 @@ const Hero = () => {
       </div>
 
       <div className="image-container">
-          <img
-            className={`fade-image ${showImage1 ? "visible" : ""}`}
-            src={image1}
-            alt="rfced"
-          />
-          <img
-            className={`fade-image ${!showImage1 ? "visible" : ""}`}
-            src={image2}
-            alt="rfced"
-          />
+        <img
+          className={`fade-image ${visibleImageIndex === 0 ? "visible" : ""}`}
+          src={image1}
+          alt="rfced"
+        />
+        <img
+          className={`fade-image ${visibleImageIndex === 1 ? "visible" : ""}`}
+          src={image2}
+          alt="rfced"
+        />
+        <img
+          className={`fade-image ${visibleImageIndex === 2 ? "visible" : ""}`}
+          src={image3}
+          alt="rfced"
+        />
+        <img
+          className={`fade-image ${visibleImageIndex === 3 ? "visible" : ""}`}
+          src={image4}
+          alt="rfced"
+        />
       </div>
     </div>
   );

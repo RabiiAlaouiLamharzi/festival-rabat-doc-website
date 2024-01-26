@@ -84,7 +84,13 @@ const Footer = () => {
           <ul>
             {FOOTER_TEXTS.FOLLOW_LINKS.map((link, index) => (
               <li key={index}>
-                <a href={link.href}>{link.label}</a>
+                <a
+                  href={link.href}
+                  target={link.label === "Facebook" ? "_blank" : undefined}
+                  rel={link.label === "Facebook" ? "noopener noreferrer" : undefined}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -97,8 +103,8 @@ const Footer = () => {
               <li key={index}>
                   <a
                     href={link.href}
-                    target={link.label === "Règlement Festival" || "Formulaire d'Inscription" ? "_blank" : undefined}
-                    rel={link.label === "Règlement Festival" || "Formulaire d'Inscription" ? "noopener noreferrer" : undefined}
+                    target={link.label === "Règlement Festival" || "Formulaire (Compétition)" || "Formulaire (Panorama)" ? "_blank" : undefined}
+                    rel={link.label === "Règlement Festival" || "Formulaire (Compétition)" || "Formulaire (Panorama)" ? "noopener noreferrer" : undefined}
                   >
                     {link.label}
                   </a>

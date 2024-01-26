@@ -62,14 +62,13 @@ export const BAR_TEXT =
     NEW_BUSINESS_PHONE: "+212 5 37 72 77 38",
     FOLLOW_TITLE: "Suivez-nous",
     FOLLOW_LINKS: [
-      { label: "Instagram", href: "#" },
-      { label: "Twitter", href: "#" },
-      { label: "LinkedIn", href: "#" },
+      { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100054726071744" },
     ],
-    LEGAL_TITLE: "Mentions Légales",
+    LEGAL_TITLE: "Mentions Légales et Liens",
     LEGAL_LINKS: [
       { label: "Règlement Festival", href: "https://drive.google.com/file/d/1Q1tnzp46jENoX5llpFWNgKBZH0pk3JLC/view?usp=sharing" },
-      { label: "Formulaire d'Inscription", href: "https://drive.google.com/file/d/1Q1tnzp46jENoX5llpFWNgKBZH0pk3JLC/view?usp=sharing" },
+      { label: "Formulaire (Compétition)", href: "https://forms.gle/bZSWxZ1rK7grojZx9" },
+      { label: "Formulaire (Panorama)", href: "https://forms.gle/PRdaV9pLBtpVe2RG7" },
     ],
     ADMIN: "PAGE D'ADMIN",
   };

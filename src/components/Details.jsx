@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from "../assets/si1.jpeg";
-import image2 from "../assets/si2.jpg";
+import image1 from "../assets/si1.JPG";
+import image2 from "../assets/si2.JPG";
 import { DETAILS_TEXTS } from "../constants/index.js";
 import { useTranslation } from "react-i18next";
 import ScrollAnimation from 'react-animate-on-scroll';
