@@ -16,6 +16,8 @@ const LazyArticles = lazy(() => import("./components/Articles"));
 const LazyFooter = lazy(() => import("./components/Footer"));
 const LazyDeco = lazy(() => import("./components/Decorative"));
 const LazyNews = lazy(() => import("./components/Newsletter"));
+const LazyImages = lazy(() => import("./components/ImageGallery"));
+const LazyGallery = lazy(() => import("./components/Gallery"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -97,6 +99,11 @@ const App = () => {
             <LazyWinners />
           </Suspense>
         </div>
+        <div id="images">
+          <Suspense>
+            <LazyImages />
+          </Suspense>
+        </div>
         <div id="sponsors">
           <Suspense>
             <LazySponsors />
@@ -110,6 +117,11 @@ const App = () => {
         <div id="articles">
           <Suspense>
             <LazyArticles />
+          </Suspense>
+        </div>
+        <div id="gallery" style={{ paddingLeft: '15%', paddingRight: '15%', paddingBottom: '1.5%', backgroundColor: 'black' }}>
+          <Suspense>
+            <LazyGallery />
           </Suspense>
         </div>
         <div id="decorative">

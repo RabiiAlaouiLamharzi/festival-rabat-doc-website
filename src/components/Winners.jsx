@@ -47,10 +47,10 @@ const Winners = () => {
       <div className="grid-container">
         <div className="left-column">
         <ScrollAnimation animateIn="fadeIn" animateOnce>
-          <img
+        <img
             src={placeholderImage}
             alt="Placeholder"
-            className={`placeholder-image ${isImageLoaded ? "hidden" : ""}`}
+            className="placeholder-image"
           />
           <h1 className="big-title">{WINNERS_TEXTS.TITLE}</h1>
           <h2 className="small-title">{WINNERS_TEXTS.DESCRIPTION}</h2>

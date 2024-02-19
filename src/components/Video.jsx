@@ -7,8 +7,8 @@ import playImage from "../assets/play.png";
 import pauseImage from "../assets/pause.png";
 
 const Video = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Initially set to true for playing
+  const [isMuted, setIsMuted] = useState(true); // Initially set to true for muted
 
   const handleVideoClick = () => {
     setIsPlaying(!isPlaying);
@@ -23,16 +23,16 @@ const Video = () => {
       <div className="control-buttons">
         <button className="control-button" onClick={handleToggleMute}>
           <img
-            src={isMuted ? unmuteImage : muteImage}
+            src={isMuted ? muteImage : unmuteImage}
             alt={isMuted ? "Unmute" : "Mute"}
-            style={{ width: "35px", height: "35px", paddingTop: "15%", filter: isMuted ? "brightness(0)" : "brightness(0)" }}
+            style={{ height: "40px", paddingLeft: "14%", filter: isMuted ? "brightness(0)" : "brightness(0)" }}
           />
         </button>
         <button className="control-button" onClick={handleVideoClick} style={{ paddingLeft: "5%" }}>
           <img
             src={isPlaying ? pauseImage : playImage}
             alt={isPlaying ? "Pause" : "Play"}
-            style={{ width: "35px", height: "35px", paddingTop: "15%"}}
+            style={{ height: "40px", paddingLeft: "14%"}}
           />
         </button>
       </div>

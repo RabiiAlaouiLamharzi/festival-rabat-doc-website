@@ -39,13 +39,35 @@ import image33 from "../assets/pressbook-78.jpg";
 import image34 from "../assets/pressbook-79.jpg";
 import image35 from "../assets/pressbook-80.jpg";
 import image36 from "../assets/pressbook-81.jpg";
-import im1 from "../assets/im1.png";
-import im2 from "../assets/im2.png";
-import im3 from "../assets/im3.png";
-import im4 from "../assets/im4.png";
-import im5 from "../assets/im5.png";
 import im6 from "../assets/im6.png";
-import im7 from "../assets/im7.png";
+import im8 from "../assets/im8.jpg";
+import im9 from "../assets/im9.jpg";
+import im10 from "../assets/im10.jpg";
+import im12 from "../assets/im12.jpeg";
+import im13 from "../assets/im13.jpg";
+import im14 from "../assets/im14.jpg";
+import im15 from "../assets/im15.jpg";
+import im16 from "../assets/im16.jpg";
+import im17 from "../assets/im17.jpg";
+import im18 from "../assets/im18.jpg";
+import im19 from "../assets/im19.jpg";
+import im20 from "../assets/im20.jpg";
+import im21 from "../assets/im21.jpg";
+import im22 from "../assets/im22.jpg";
+import im23 from "../assets/im23.jpg";
+import im24 from "../assets/im24.jpg";
+import im25 from "../assets/im25.jpg";
+import im26 from "../assets/im26.jpg";
+import im27 from "../assets/im27.jpg";
+import im28 from "../assets/im28.jpg";
+import im29 from "../assets/im29.jpg";
+import im30 from "../assets/im30.jpg";
+import im31 from "../assets/im31.jpg";
+import im32 from "../assets/im32.jpg";
+import im33 from "../assets/im33.jpg";
+import im34 from "../assets/im34.jpg";
+
+
 
 const images = [
   image1, image2, image3, image4, image5, image6, image7, image8, image9,
@@ -107,7 +129,14 @@ const OriginalButtons = () => {
               <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
               <div className="original-title">{button.title}</div>
               <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
-              <img src={im1} style={commonImageStyle} alt="Image 1" />
+              <div className="conference-image-container">
+                <img src={im26} className="conference-image conference-image-1" alt="Image 2" />
+                <img src={im27} className="conference-image conference-image-2" alt="Image 3" />
+                <img src={im28} className="conference-image conference-image-3" alt="Image 4" />
+                <img src={im29} className="conference-image conference-image-4" alt="Image 5" />
+                <img src={im30} className="conference-image conference-image-5" alt="Image 6" />
+                <img src={im31} className="conference-image conference-image-6" alt="Image 7" />
+              </div>
             </>
           );
         case 1:
@@ -116,21 +145,36 @@ const OriginalButtons = () => {
               <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
               <div className="original-title">{button.title}</div>
               <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
-              <img src={im7} style={commonImageStyle} alt="Image 7" />
+              <div className="winners-image-container">
+                <img src={im8} style={commonImageStyle2} alt="Image 2" />
+                <img src={im9} style={commonImageStyle2} alt="Image 3" />
+                <img src={im10} style={commonImageStyle2} alt="Image 4" />
+                <img src={im12} style={commonImageStyle2} alt="Image 3" />
+                <img src={im13} style={commonImageStyle2} alt="Image 4" />
+              </div>
             </>
           );
         case 3:
           return (
             <>
-              <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
-              <div className="original-title">{button.title}</div>
-              <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src={im2} style={commonImageStyle2} alt="Image 2" />
-                <img src={im3} style={commonImageStyle2} alt="Image 3" />
-                <img src={im4} style={commonImageStyle2} alt="Image 4" />
-              </div>
-            </>
+            <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
+            <div className="original-title">{button.title}</div>
+            <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
+            <div className="workshops-image-container">
+              <img src={im14} className="workshop-image workshop-image-1" alt="Image 2" />
+              <img src={im15} className="workshop-image workshop-image-2" alt="Image 3" />
+              <img src={im16} className="workshop-image workshop-image-3" alt="Image 4" />
+              <img src={im17} className="workshop-image workshop-image-4" alt="Image 5" />
+              <img src={im18} className="workshop-image workshop-image-5" alt="Image 6" />
+              <img src={im19} className="workshop-image workshop-image-6" alt="Image 7" />
+              <img src={im20} className="workshop-image workshop-image-7" alt="Image 8" />
+              <img src={im21} className="workshop-image workshop-image-8" alt="Image 9" />
+              <img src={im22} className="workshop-image workshop-image-9" alt="Image 10" />
+              <img src={im23} className="workshop-image" alt="Image 11" />
+              <img src={im24} className="workshop-image" alt="Image 12" />
+              <img src={im25} className="workshop-image" alt="Image 13" />
+            </div>
+          </>
           );
         case 4:
           return (
@@ -138,7 +182,11 @@ const OriginalButtons = () => {
               <div className="original-text red" style={{ margin: "0px", padding: "0px" }}>→</div>
               <div className="original-title">{button.title}</div>
               <div className="original-text" style={{ paddingBottom: "40px" }}>{button.text}</div>
-              <img src={im6} style={commonImageStyle} alt="Image 6" />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <img src={im32} style={commonImageStyle2} alt="Image 2" />
+                <img src={im34} style={commonImageStyle2} alt="Image 3" />
+                <img src={im33} style={commonImageStyle2} alt="Image 4" />
+              </div>
             </>
           );
         default:
