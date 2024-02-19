@@ -25,14 +25,14 @@ const Video = () => {
           <img
             src={isMuted ? muteImage : unmuteImage}
             alt={isMuted ? "Unmute" : "Mute"}
-            style={{ height: "40px", paddingLeft: "14%", filter: isMuted ? "brightness(0)" : "brightness(0)" }}
+            style={{ height: "40px", paddingTop: "10%", filter: isMuted ? "brightness(0)" : "brightness(0)" }}
           />
         </button>
         <button className="control-button" onClick={handleVideoClick} style={{ paddingLeft: "5%" }}>
           <img
             src={isPlaying ? pauseImage : playImage}
             alt={isPlaying ? "Pause" : "Play"}
-            style={{ height: "40px", paddingLeft: "14%"}}
+            style={{ height: "40px", paddingTop: "14%"}}
           />
         </button>
       </div>
