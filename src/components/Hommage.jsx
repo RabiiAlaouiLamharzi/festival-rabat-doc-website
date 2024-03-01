@@ -1,10 +1,13 @@
 import React from 'react';
 import img1 from "../assets/hommage1.jpg";
 import img2 from "../assets/hommage2.jpg";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Hommage = () => {
   return (
     <div style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingBottom: '3%', }}>
+      <ScrollAnimation animateIn="fadeIn" animateOnce>
       <div className='hommage-div'>
         <div className='hommage-text'>
           <h2 className='hommage-title' style={{ color: 'black' }}>Hommage</h2>
@@ -17,6 +20,7 @@ const Hommage = () => {
           <img src={img2} alt="44" />
         </div>
       </div>
+      </ScrollAnimation>
     </div>
   );
 };
