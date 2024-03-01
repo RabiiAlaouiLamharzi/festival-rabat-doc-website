@@ -2403,7 +2403,7 @@ form {
 }
 
 .newsletter-form button {
-  flex: 0.155; 
+  flex: 0.155;
   cursor: pointer;
   background-color: goldenrod;
   border: 1px solid goldenrod;
@@ -2420,7 +2420,7 @@ form {
 }
 
 .newsletter-form button:hover {
-  flex: 0.155; 
+  flex: 0.155;
   cursor: pointer;
   background-color: white;
   border: 1px solid white;
@@ -2457,7 +2457,7 @@ form {
 
 .highlighted-section {
   background-color: rgba(255, 255, 255, 0.25);
-  transition: opacity 1s ease-in-out; 
+  transition: opacity 1s ease-in-out;
   padding: 0px;
 }
 
@@ -2504,7 +2504,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  object-fit: cover; 
+  object-fit: cover;
   padding: 1% 15% 0% 15%;
   background-color: black;
 }
@@ -2587,7 +2587,7 @@ form {
   .image-gallery {
     padding: 20%;
   }
-} 
+}
 
 .imim-overlay {
   position: fixed;
@@ -2622,7 +2622,7 @@ form {
     width: 0%;
     height: 0%;
   }
-} 
+}
 
 .imim-overlay-content {
   position: fixed;
@@ -2946,7 +2946,7 @@ form {
     font-family: "Trocchi", serif;
     font-weight: 600;
   }
-  
+
   .hommage-para{
     font-size: 15px;
     font-family: "DM Sans", sans-serif;
@@ -2974,7 +2974,7 @@ form {
     font-family: "Trocchi", serif;
     font-weight: 600;
   }
-  
+
   .hommage-para{
     font-size: 14px;
     font-family: "DM Sans", sans-serif;
