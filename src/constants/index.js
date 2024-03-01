@@ -12,7 +12,7 @@ export const ARTICLES_TEXT = {
 };
 
 export const BAR_TEXT =
-  " Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 - Festival Rabat 2023 -";
+  " 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 - 2ÉME Édition Du 22 au 27 Mars 2024 -";
 
   export const buttonContent = [
     {
@@ -66,9 +66,9 @@ export const BAR_TEXT =
     ],
     LEGAL_TITLE: "Mentions Légales et Liens",
     LEGAL_LINKS: [
-      { label: "Règlement Festival", href: "https://drive.google.com/file/d/1Q1tnzp46jENoX5llpFWNgKBZH0pk3JLC/view?usp=sharing" },
-      { label: "Formulaire (Compétition)", href: "https://forms.gle/bZSWxZ1rK7grojZx9" },
-      { label: "Formulaire (Panorama)", href: "https://forms.gle/PRdaV9pLBtpVe2RG7" },
+      { label: "Règlement Festival", href: "https://drive.google.com/file/d/16D-9xW2VqyRLoR_8g9ZhslEzL9l5ogVR/view?usp=sharing" },
+      { label: "Formulaire (Compétition)", href: "https://forms.gle/cPLY2D7bAWs6c8yy9" },
+      { label: "Formulaire (Panorama)", href: "https://forms.gle/xY1kgydQvCtr5xnN7" },
     ],
     ADMIN: "PAGE D'ADMIN",
   };
