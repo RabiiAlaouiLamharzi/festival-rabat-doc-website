@@ -18,6 +18,7 @@ const LazyDeco = lazy(() => import("./components/Decorative"));
 const LazyNews = lazy(() => import("./components/Newsletter"));
 const LazyImages = lazy(() => import("./components/ImageGallery"));
 const LazyGallery = lazy(() => import("./components/Gallery"));
+const LazyHommage = lazy(() => import("./components/Hommage"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -112,6 +113,11 @@ const App = () => {
         <div id="buttons">
           <Suspense>
             <LazyButtons />
+          </Suspense>
+        </div>
+        <div id="hommage">
+          <Suspense>
+            <LazyHommage />
           </Suspense>
         </div>
         <div id="articles">

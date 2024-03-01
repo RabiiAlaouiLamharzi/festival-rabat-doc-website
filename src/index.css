@@ -1257,9 +1257,9 @@ body.nav-active .nav__list-item:nth-child(10) {
   border: 3px solid black;
   filter: invert(100%);
   padding: 10px;
-  width: 10%;
-  height: 10%;
-  margin-bottom: 5%;
+  width: 7%;
+  height: 7%;
+  margin-bottom: 0.5%;
   border-radius: 50px;
 }
 
@@ -1268,9 +1268,9 @@ body.nav-active .nav__list-item:nth-child(10) {
     border: 3px solid black;
     filter: invert(100%);
     padding: 10px;
-    width: 15%;
+    width: 10%;
     height: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     border-radius: 50px;
   }
 }
@@ -2868,4 +2868,118 @@ form {
   justify-content:center;
   align-items:center;
   overflow: hidden;
+}
+
+.hommage-div{
+  display: flex;
+  flex-direction: row;
+  background-color: goldenrod;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 2% 2% 2% 2%;
+  border-radius: 30px;
+}
+
+.hommage-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.hommage-title{
+  font-size: 35px;
+  font-family: "Trocchi", serif;
+  font-weight: 600;
+}
+
+.hommage-para{
+  font-size: 19px;
+  font-family: "DM Sans", sans-serif;
+  line-height: normal;
+  padding-top: 1%;
+  padding-right: 4%;
+}
+
+.hommage-images{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hommage-images img{
+  width: 48.5%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: sepia(60%);
+}
+
+@media (max-width: 1500px) {
+  .hommage-div{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 3% 3% 3%;
+  }
+  .hommage-images img{
+    width: 48.5%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hommage-div{
+    background-color: goldenrod;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+    padding: 3% 3% 3% 3%;
+    border-radius: 30px;
+  }
+  .hommage-images img{
+    width: 48%;
+    margin-top: 3%;
+  }
+  .hommage-title{
+    font-size: 30px;
+    font-family: "Trocchi", serif;
+    font-weight: 600;
+  }
+  
+  .hommage-para{
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    line-height: normal;
+    text-align: justify;
+    padding-top: 1%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hommage-div{
+    background-color: goldenrod;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+    padding: 5% 5% 5% 5%;
+    border-radius: 30px;
+  }
+  .hommage-images img{
+    width: 48%;
+    margin-top: 5%;
+  }
+  .hommage-title{
+    font-size: 30px;
+    font-family: "Trocchi", serif;
+    font-weight: 600;
+  }
+  
+  .hommage-para{
+    font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    line-height: normal;
+    text-align: justify;
+    padding-top: 1%;
+  }
 }

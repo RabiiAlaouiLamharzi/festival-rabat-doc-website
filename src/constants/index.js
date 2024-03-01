@@ -56,7 +56,7 @@ export const BAR_TEXT =
     VISIT_TITLE: "Visiter",
     VISIT_ADDRESS: ["2, Rue de Bethléem,", "Bât. 2 N° 8", "Rabat - Maroc"],
     CONTACT_TITLE: "Contact",
-    CONTACT_EMAIL: "saissmedit@gmail.com",
+    CONTACT_EMAIL: "rabatdocfestival@gmail.com",
     CONTACT_PHONE: "+212 5 37 72 77 38",
     NEW_BUSINESS_TITLE: "Nouveau Business",
     NEW_BUSINESS_PHONE: "+212 5 37 72 77 38",
